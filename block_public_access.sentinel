@@ -1,0 +1,20 @@
+# Imports mock data
+import "tfplan/v2" as tfplan
+
+s3_bucket_access = filter tfplan.resource_changes as _, rc {
+    rc.type is "aws_s3_bucket_public_access_block" and
+        (rc.change.actions contains "create" or rc.change.actions is ["update"])
+}
+
+block_public_access = rule {
+	all s3_bucket_access as _, bucket_access {
+		bucket_access.change.after.block_public_acls and 
+		bucket_access.change.after.block_public_policy and 
+		bucket_access.change.after.ignore_public_acls and 
+		bucket_access.change.after.restrict_public_buckets
+	}
+}
+
+main = rule {
+	block_public_access
+}

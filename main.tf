@@ -88,6 +88,11 @@ module "cloudfront_log_bucket" {
   control_object_ownership = true
   object_ownership         = "ObjectWriter"
 
+  block_public_acls     = false
+  block_public_policy     = false
+  ignore_public_acls      = false
+  restrict_public_buckets = false
+
   grant = [{
     type       = "CanonicalUser"
     permission = "FULL_CONTROL"

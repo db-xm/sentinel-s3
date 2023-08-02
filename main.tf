@@ -64,8 +64,7 @@ data "aws_iam_policy_document" "bucket_policy" {
 }
 
 module "log_bucket" {
-  //source = "./modules"
-  source = "git::https://github.com/terraform-aws-modules/terraform-aws-s3-bucket.git"
+  source = "./modules"
 
   bucket        = "logs-${random_pet.this.id}"
   force_destroy = true
@@ -83,8 +82,7 @@ module "log_bucket" {
 }
 
 module "cloudfront_log_bucket" {
-  //source = "./modules"
-  source = "git::https://github.com/terraform-aws-modules/terraform-aws-s3-bucket.git"
+  source = "./modules"
 
   bucket                   = "cloudfront-logs-${random_pet.this.id}"
   control_object_ownership = true
@@ -114,8 +112,7 @@ module "cloudfront_log_bucket" {
 }
 
 module "s3_bucket" {
-  //source = "./modules"
-  source = "git::https://github.com/terraform-aws-modules/terraform-aws-s3-bucket.git"
+  source = "./modules"
 
   bucket = local.bucket_name
 

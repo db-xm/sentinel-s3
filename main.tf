@@ -74,7 +74,7 @@ module "s3_bucket" {
   request_payer       = "BucketOwner"
 
   tags = {
-    Owner = "Anton"
+    Classification = "Anton"
   }
 
   # Note: Object Lock configuration can be enabled only on new buckets

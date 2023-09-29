@@ -114,11 +114,6 @@ module "s3_bucket" {
 
   acl = "private" # "acl" conflicts with "grant" and "owner"
 
-  logging = {
-    target_bucket = module.log_bucket.s3_bucket_id
-    target_prefix = "log/"
-  }
-
   versioning = {
     status     = true
     mfa_delete = false

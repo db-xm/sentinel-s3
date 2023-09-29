@@ -1,0 +1,21 @@
+import "tfplan/v2" as tfplan
+
+aws_s3_buckets = filter tfplan.resource_changes as _, rc {
+    rc.type is "aws_s3_bucket"
+}
+
+mandatory_tags = [
+    "Classification",
+]
+
+mandatory_instance_tags = rule {
+    all aws_s3_buckets as _, bucket {
+        all mandatory_tags as mt {
+            bucket.change.after.tags contains mt
+        }
+    }
+}
+
+main = rule {
+    mandatory_instance_tags
+}

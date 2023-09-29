@@ -63,56 +63,6 @@ data "aws_iam_policy_document" "bucket_policy" {
   }
 }
 
-module "log_bucket" {
-  //source = "./modules"
-  source = "git::https://github.com/terraform-aws-modules/terraform-aws-s3-bucket.git"
-
-  bucket        = "logs-${random_pet.this.id}"
-  force_destroy = true
-
-  control_object_ownership = true
-
-  attach_elb_log_delivery_policy        = true
-  attach_lb_log_delivery_policy         = true
-  attach_access_log_delivery_policy     = true
-  attach_deny_insecure_transport_policy = true
-  attach_require_latest_tls_policy      = true
-
-  access_log_delivery_policy_source_accounts = [data.aws_caller_identity.current.account_id]
-  access_log_delivery_policy_source_buckets  = ["arn:aws:s3:::${local.bucket_name}"]
-}
-
-module "cloudfront_log_bucket" {
-  //source = "./modules"
-  source = "git::https://github.com/terraform-aws-modules/terraform-aws-s3-bucket.git"
-
-  bucket                   = "cloudfront-logs-${random_pet.this.id}"
-  control_object_ownership = true
-  object_ownership         = "ObjectWriter"
-
-  block_public_acls     = false
-  block_public_policy     = false
-  ignore_public_acls      = false
-  restrict_public_buckets = false
-
-  grant = [{
-    type       = "CanonicalUser"
-    permission = "FULL_CONTROL"
-    id         = data.aws_canonical_user_id.current.id
-    }, {
-    type       = "CanonicalUser"
-    permission = "FULL_CONTROL"
-    id         = data.aws_cloudfront_log_delivery_canonical_user_id.cloudfront.id # Ref. https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/AccessLogs.html
-    }
-  ]
-
-  owner = {
-    id = data.aws_canonical_user_id.current.id
-  }
-
-  force_destroy = true
-}
-
 module "s3_bucket" {
   //source = "./modules"
   source = "git::https://github.com/terraform-aws-modules/terraform-aws-s3-bucket.git"

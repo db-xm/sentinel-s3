@@ -1,0 +1,294 @@
+terraform_version = "1.5.3"
+
+outputs = {
+	"s3_bucket_lifecycle_configuration_rules": {
+		"name":      "s3_bucket_lifecycle_configuration_rules",
+		"sensitive": false,
+		"value": [
+			{
+				"abort_incomplete_multipart_upload": [],
+				"expiration":                        [],
+				"filter": [
+					{
+						"and": [
+							{
+								"object_size_greater_than": null,
+								"object_size_less_than":    null,
+								"prefix":                   null,
+								"tags": {
+									"another": "value2",
+									"some":    "value",
+								},
+							},
+						],
+						"object_size_greater_than": null,
+						"object_size_less_than":    null,
+						"prefix":                   null,
+						"tag":                      [],
+					},
+				],
+				"id": "log",
+				"noncurrent_version_expiration": [],
+				"noncurrent_version_transition": [],
+				"prefix":                        null,
+				"status":                        "Enabled",
+				"transition": [
+					{
+						"date":          "",
+						"days":          30,
+						"storage_class": "ONEZONE_IA",
+					},
+					{
+						"date":          "",
+						"days":          60,
+						"storage_class": "GLACIER",
+					},
+				],
+			},
+			{
+				"abort_incomplete_multipart_upload": [
+					{
+						"days_after_initiation": 7,
+					},
+				],
+				"expiration": [],
+				"filter": [
+					{
+						"and": [],
+						"object_size_greater_than": null,
+						"object_size_less_than":    null,
+						"prefix":                   null,
+						"tag":                      [],
+					},
+				],
+				"id": "log1",
+				"noncurrent_version_expiration": [
+					{
+						"newer_noncurrent_versions": null,
+						"noncurrent_days":           300,
+					},
+				],
+				"noncurrent_version_transition": [
+					{
+						"newer_noncurrent_versions": "",
+						"noncurrent_days":           30,
+						"storage_class":             "STANDARD_IA",
+					},
+					{
+						"newer_noncurrent_versions": "",
+						"noncurrent_days":           60,
+						"storage_class":             "ONEZONE_IA",
+					},
+					{
+						"newer_noncurrent_versions": "",
+						"noncurrent_days":           90,
+						"storage_class":             "GLACIER",
+					},
+				],
+				"prefix":     null,
+				"status":     "Enabled",
+				"transition": [],
+			},
+			{
+				"abort_incomplete_multipart_upload": [],
+				"expiration":                        [],
+				"filter": [
+					{
+						"and": [
+							{
+								"object_size_greater_than": 200000,
+								"object_size_less_than":    500000,
+								"prefix":                   "log1/",
+								"tags": {
+									"another": "value2",
+									"some":    "value",
+								},
+							},
+						],
+						"object_size_greater_than": null,
+						"object_size_less_than":    null,
+						"prefix":                   null,
+						"tag":                      [],
+					},
+				],
+				"id": "log2",
+				"noncurrent_version_expiration": [
+					{
+						"newer_noncurrent_versions": null,
+						"noncurrent_days":           300,
+					},
+				],
+				"noncurrent_version_transition": [
+					{
+						"newer_noncurrent_versions": "",
+						"noncurrent_days":           30,
+						"storage_class":             "STANDARD_IA",
+					},
+				],
+				"prefix":     null,
+				"status":     "Enabled",
+				"transition": [],
+			},
+		],
+	},
+}
+
+resources = {
+	"aws_caller_identity.current": {
+		"address":        "aws_caller_identity.current",
+		"depends_on":     [],
+		"deposed_key":    "",
+		"index":          null,
+		"mode":           "data",
+		"module_address": "",
+		"name":           "current",
+		"provider_name":  "registry.terraform.io/hashicorp/aws",
+		"tainted":        false,
+		"type":           "aws_caller_identity",
+		"values": {
+			"account_id": "874037324847",
+			"arn":        "arn:aws:sts::874037324847:assumed-role/AWSReservedSSO_AdministratorAccess_8b96fb376c5ce27e/dbmoss@tradingpoint.com",
+			"id":         "874037324847",
+			"user_id":    "AROA4XAFPFQXSDLBGWK5D:dbmoss@tradingpoint.com",
+		},
+	},
+	"aws_canonical_user_id.current": {
+		"address":        "aws_canonical_user_id.current",
+		"depends_on":     [],
+		"deposed_key":    "",
+		"index":          null,
+		"mode":           "data",
+		"module_address": "",
+		"name":           "current",
+		"provider_name":  "registry.terraform.io/hashicorp/aws",
+		"tainted":        false,
+		"type":           "aws_canonical_user_id",
+		"values": {
+			"display_name": "38611e63afe643de99ed5a5074ad4593",
+			"id":           "6cdab8d73b20fb1dd35b12e4d694448bd88b09ec079562d4b0fb7285e0683a9d",
+		},
+	},
+	"aws_cloudfront_log_delivery_canonical_user_id.cloudfront": {
+		"address":        "aws_cloudfront_log_delivery_canonical_user_id.cloudfront",
+		"depends_on":     [],
+		"deposed_key":    "",
+		"index":          null,
+		"mode":           "data",
+		"module_address": "",
+		"name":           "cloudfront",
+		"provider_name":  "registry.terraform.io/hashicorp/aws",
+		"tainted":        false,
+		"type":           "aws_cloudfront_log_delivery_canonical_user_id",
+		"values": {
+			"id":     "c4c1ede66af53448b93c283ce9448c4ba468c9432aa01d700d3878632f77d2d0",
+			"region": null,
+		},
+	},
+	"aws_iam_policy_document.policy": {
+		"address":        "aws_iam_policy_document.policy",
+		"depends_on":     [],
+		"deposed_key":    "",
+		"index":          null,
+		"mode":           "data",
+		"module_address": "",
+		"name":           "policy",
+		"provider_name":  "registry.terraform.io/hashicorp/aws",
+		"tainted":        false,
+		"type":           "aws_iam_policy_document",
+		"values": {
+			"id":   "73423766",
+			"json": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Sid\": \"BadIAMPolicy\",\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:*\",\n      \"Resource\": \"*\"\n    }\n  ]\n}",
+			"override_policy_documents": null,
+			"policy_id":                 null,
+			"source_policy_documents":   null,
+			"statement": [
+				{
+					"actions": [
+						"s3:*",
+					],
+					"condition":      [],
+					"effect":         "Allow",
+					"not_actions":    [],
+					"not_principals": [],
+					"not_resources":  [],
+					"principals":     [],
+					"resources": [
+						"*",
+					],
+					"sid": "BadIAMPolicy",
+				},
+			],
+			"version": "2012-10-17",
+		},
+	},
+	"module.s3_bucket.aws_caller_identity.current": {
+		"address":        "module.s3_bucket.aws_caller_identity.current",
+		"depends_on":     [],
+		"deposed_key":    "",
+		"index":          null,
+		"mode":           "data",
+		"module_address": "module.s3_bucket",
+		"name":           "current",
+		"provider_name":  "registry.terraform.io/hashicorp/aws",
+		"tainted":        false,
+		"type":           "aws_caller_identity",
+		"values": {
+			"account_id": "874037324847",
+			"arn":        "arn:aws:sts::874037324847:assumed-role/AWSReservedSSO_AdministratorAccess_8b96fb376c5ce27e/dbmoss@tradingpoint.com",
+			"id":         "874037324847",
+			"user_id":    "AROA4XAFPFQXSDLBGWK5D:dbmoss@tradingpoint.com",
+		},
+	},
+	"module.s3_bucket.aws_canonical_user_id.this[0]": {
+		"address":        "module.s3_bucket.aws_canonical_user_id.this[0]",
+		"depends_on":     [],
+		"deposed_key":    "",
+		"index":          0,
+		"mode":           "data",
+		"module_address": "module.s3_bucket",
+		"name":           "this",
+		"provider_name":  "registry.terraform.io/hashicorp/aws",
+		"tainted":        false,
+		"type":           "aws_canonical_user_id",
+		"values": {
+			"display_name": "38611e63afe643de99ed5a5074ad4593",
+			"id":           "6cdab8d73b20fb1dd35b12e4d694448bd88b09ec079562d4b0fb7285e0683a9d",
+		},
+	},
+	"module.s3_bucket.aws_partition.current": {
+		"address":        "module.s3_bucket.aws_partition.current",
+		"depends_on":     [],
+		"deposed_key":    "",
+		"index":          null,
+		"mode":           "data",
+		"module_address": "module.s3_bucket",
+		"name":           "current",
+		"provider_name":  "registry.terraform.io/hashicorp/aws",
+		"tainted":        false,
+		"type":           "aws_partition",
+		"values": {
+			"dns_suffix":         "amazonaws.com",
+			"id":                 "aws",
+			"partition":          "aws",
+			"reverse_dns_prefix": "com.amazonaws",
+		},
+	},
+	"module.s3_bucket.aws_region.current": {
+		"address":        "module.s3_bucket.aws_region.current",
+		"depends_on":     [],
+		"deposed_key":    "",
+		"index":          null,
+		"mode":           "data",
+		"module_address": "module.s3_bucket",
+		"name":           "current",
+		"provider_name":  "registry.terraform.io/hashicorp/aws",
+		"tainted":        false,
+		"type":           "aws_region",
+		"values": {
+			"description": "Europe (Ireland)",
+			"endpoint":    "ec2.eu-west-1.amazonaws.com",
+			"id":          "eu-west-1",
+			"name":        "eu-west-1",
+		},
+	},
+}

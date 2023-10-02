@@ -1,0 +1,5625 @@
+import "strings"
+import "types"
+
+_modules = {
+	"root": {
+		"data": {
+			"aws_iam_policy_document": {
+				"bucket_policy": {
+					0: {
+						"applied": {
+							"override_policy_documents": null,
+							"policy_id":                 null,
+							"source_policy_documents":   null,
+							"statement": [
+								{
+									"actions": [
+										"s3:ListBucket",
+									],
+									"condition":      [],
+									"effect":         null,
+									"not_actions":    null,
+									"not_principals": [],
+									"not_resources":  null,
+									"principals": [
+										{
+											"identifiers": [
+												null,
+											],
+											"type": "AWS",
+										},
+									],
+									"resources": [
+										null,
+									],
+									"sid": null,
+								},
+							],
+							"version": null,
+						},
+						"destroy": false,
+						"diff": {
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"json": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"override_policy_documents": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"policy_id": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"source_policy_documents": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"statement.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"statement.0.%": {
+								"computed": false,
+								"new":      "9",
+								"old":      "",
+							},
+							"statement.0.actions.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"statement.0.actions.0": {
+								"computed": false,
+								"new":      "s3:ListBucket",
+								"old":      "",
+							},
+							"statement.0.condition.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"statement.0.effect": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"statement.0.not_actions": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"statement.0.not_principals.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"statement.0.not_resources": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"statement.0.principals.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"statement.0.principals.0.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"statement.0.principals.0.identifiers.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"statement.0.principals.0.type": {
+								"computed": false,
+								"new":      "AWS",
+								"old":      "",
+							},
+							"statement.0.resources.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"statement.0.sid": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"version": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+		},
+		"path": [],
+		"resources": {
+			"aws_db_instance": {
+				"rds": {
+					0: {
+						"applied": {
+							"allocated_storage":               10,
+							"allow_major_version_upgrade":     null,
+							"apply_immediately":               false,
+							"auto_minor_version_upgrade":      true,
+							"blue_green_update":               [],
+							"copy_tags_to_snapshot":           false,
+							"custom_iam_instance_profile":     null,
+							"customer_owned_ip_enabled":       null,
+							"db_name":                         "xmiactooltesting",
+							"delete_automated_backups":        true,
+							"deletion_protection":             null,
+							"domain":                          null,
+							"domain_iam_role_name":            null,
+							"enabled_cloudwatch_logs_exports": null,
+							"engine":                              "mysql",
+							"engine_version":                      "5.7",
+							"final_snapshot_identifier":           null,
+							"iam_database_authentication_enabled": null,
+							"instance_class":                      "db.t3.micro",
+							"manage_master_user_password":         null,
+							"max_allocated_storage":               null,
+							"monitoring_interval":                 0,
+							"password":                            "REDACTED_SENSITIVE",
+							"performance_insights_enabled":        false,
+							"publicly_accessible":                 false,
+							"replicate_source_db":                 null,
+							"restore_to_point_in_time":            [],
+							"s3_import":                           [],
+							"skip_final_snapshot":                 true,
+							"storage_encrypted":                   true,
+							"tags":                                null,
+							"timeouts":                            null,
+							"username":                            "username",
+						},
+						"destroy": false,
+						"diff": {
+							"address": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"allocated_storage": {
+								"computed": false,
+								"new":      "10",
+								"old":      "",
+							},
+							"allow_major_version_upgrade": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"apply_immediately": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"auto_minor_version_upgrade": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"availability_zone": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"backup_retention_period": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"backup_target": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"backup_window": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"blue_green_update.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"ca_cert_identifier": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"character_set_name": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"copy_tags_to_snapshot": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"custom_iam_instance_profile": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"customer_owned_ip_enabled": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"db_name": {
+								"computed": false,
+								"new":      "xmiactooltesting",
+								"old":      "",
+							},
+							"db_subnet_group_name": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"delete_automated_backups": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"deletion_protection": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"domain": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"domain_iam_role_name": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"enabled_cloudwatch_logs_exports": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"endpoint": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"engine": {
+								"computed": false,
+								"new":      "mysql",
+								"old":      "",
+							},
+							"engine_version": {
+								"computed": false,
+								"new":      "5.7",
+								"old":      "",
+							},
+							"engine_version_actual": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"final_snapshot_identifier": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"hosted_zone_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"iam_database_authentication_enabled": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"identifier": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"identifier_prefix": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"instance_class": {
+								"computed": false,
+								"new":      "db.t3.micro",
+								"old":      "",
+							},
+							"iops": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"kms_key_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"latest_restorable_time": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"license_model": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"listener_endpoint.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"maintenance_window": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"manage_master_user_password": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"master_user_secret.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"master_user_secret_kms_key_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"max_allocated_storage": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"monitoring_interval": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"monitoring_role_arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"multi_az": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"nchar_character_set_name": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"network_type": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"option_group_name": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"parameter_group_name": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"password": {
+								"computed": false,
+								"new":      "REDACTED_SENSITIVE",
+								"old":      "",
+							},
+							"performance_insights_enabled": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"performance_insights_kms_key_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"performance_insights_retention_period": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"port": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"publicly_accessible": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"replica_mode": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"replicas.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"replicate_source_db": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"resource_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"restore_to_point_in_time.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"s3_import.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"skip_final_snapshot": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"snapshot_identifier": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"status": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"storage_encrypted": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"storage_throughput": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"storage_type": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"tags": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"tags_all.%": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"timeouts": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"timezone": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"username": {
+								"computed": false,
+								"new":      "username",
+								"old":      "",
+							},
+							"vpc_security_group_ids.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_db_parameter_group": {
+				"mysql": {
+					0: {
+						"applied": {
+							"description": "Managed by Terraform",
+							"family":      "mysql8.0",
+							"name":        "rds-mysql",
+							"parameter": [
+								{
+									"apply_method": "immediate",
+									"name":         "require_secure_transport",
+									"value":        "0",
+								},
+							],
+							"tags": null,
+						},
+						"destroy": false,
+						"diff": {
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"description": {
+								"computed": false,
+								"new":      "Managed by Terraform",
+								"old":      "",
+							},
+							"family": {
+								"computed": false,
+								"new":      "mysql8.0",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"name": {
+								"computed": false,
+								"new":      "rds-mysql",
+								"old":      "",
+							},
+							"name_prefix": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"parameter.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"parameter.0.%": {
+								"computed": false,
+								"new":      "3",
+								"old":      "",
+							},
+							"parameter.0.apply_method": {
+								"computed": false,
+								"new":      "immediate",
+								"old":      "",
+							},
+							"parameter.0.name": {
+								"computed": false,
+								"new":      "require_secure_transport",
+								"old":      "",
+							},
+							"parameter.0.value": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"tags": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"tags_all.%": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+				"postgres": {
+					0: {
+						"applied": {
+							"description": "Managed by Terraform",
+							"family":      "postgres14",
+							"name":        "rds-postgres",
+							"parameter": [
+								{
+									"apply_method": "immediate",
+									"name":         "rds.force_ssl",
+									"value":        "0",
+								},
+							],
+							"tags": null,
+						},
+						"destroy": false,
+						"diff": {
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"description": {
+								"computed": false,
+								"new":      "Managed by Terraform",
+								"old":      "",
+							},
+							"family": {
+								"computed": false,
+								"new":      "postgres14",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"name": {
+								"computed": false,
+								"new":      "rds-postgres",
+								"old":      "",
+							},
+							"name_prefix": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"parameter.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"parameter.0.%": {
+								"computed": false,
+								"new":      "3",
+								"old":      "",
+							},
+							"parameter.0.apply_method": {
+								"computed": false,
+								"new":      "immediate",
+								"old":      "",
+							},
+							"parameter.0.name": {
+								"computed": false,
+								"new":      "rds.force_ssl",
+								"old":      "",
+							},
+							"parameter.0.value": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"tags": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"tags_all.%": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_db_subnet_group": {
+				"rds": {
+					0: {
+						"applied": {
+							"description": "Managed by Terraform",
+							"name":        "xm-iac-tool-testing",
+							"subnet_ids": [
+								"subnet-02d788258419c254e",
+								"subnet-0722963c0148d5b05",
+								"subnet-0f1a67098d01ba80b",
+							],
+							"tags": null,
+						},
+						"destroy": false,
+						"diff": {
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"description": {
+								"computed": false,
+								"new":      "Managed by Terraform",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"name": {
+								"computed": false,
+								"new":      "xm-iac-tool-testing",
+								"old":      "",
+							},
+							"name_prefix": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"subnet_ids.#": {
+								"computed": false,
+								"new":      "3",
+								"old":      "",
+							},
+							"subnet_ids.0": {
+								"computed": false,
+								"new":      "subnet-02d788258419c254e",
+								"old":      "",
+							},
+							"subnet_ids.1": {
+								"computed": false,
+								"new":      "subnet-0722963c0148d5b05",
+								"old":      "",
+							},
+							"subnet_ids.2": {
+								"computed": false,
+								"new":      "subnet-0f1a67098d01ba80b",
+								"old":      "",
+							},
+							"supported_network_types.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"tags": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"tags_all.%": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"vpc_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_iam_policy": {
+				"policy": {
+					0: {
+						"applied": {
+							"description": "Bad policy attached to a user.",
+							"name":        "xm-iac-tool-testing",
+							"path":        "/",
+							"policy":      "{\"Statement\":[{\"Action\":\"s3:*\",\"Effect\":\"Allow\",\"Resource\":\"*\",\"Sid\":\"BadIAMPolicy\"}],\"Version\":\"2012-10-17\"}",
+							"tags":        null,
+						},
+						"destroy": false,
+						"diff": {
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"description": {
+								"computed": false,
+								"new":      "Bad policy attached to a user.",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"name": {
+								"computed": false,
+								"new":      "xm-iac-tool-testing",
+								"old":      "",
+							},
+							"name_prefix": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"path": {
+								"computed": false,
+								"new":      "/",
+								"old":      "",
+							},
+							"policy": {
+								"computed": false,
+								"new":      "{\"Statement\":[{\"Action\":\"s3:*\",\"Effect\":\"Allow\",\"Resource\":\"*\",\"Sid\":\"BadIAMPolicy\"}],\"Version\":\"2012-10-17\"}",
+								"old":      "",
+							},
+							"policy_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"tags": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"tags_all.%": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_iam_role": {
+				"this": {
+					0: {
+						"applied": {
+							"assume_role_policy":    "{\"Statement\":[{\"Action\":\"sts:AssumeRole\",\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"ec2.amazonaws.com\"},\"Sid\":\"\"}],\"Version\":\"2012-10-17\"}",
+							"description":           null,
+							"force_detach_policies": false,
+							"max_session_duration":  3600,
+							"path":                  "/",
+							"permissions_boundary":  null,
+							"tags":                  null,
+						},
+						"destroy": false,
+						"diff": {
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"assume_role_policy": {
+								"computed": false,
+								"new":      "{\"Statement\":[{\"Action\":\"sts:AssumeRole\",\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"ec2.amazonaws.com\"},\"Sid\":\"\"}],\"Version\":\"2012-10-17\"}",
+								"old":      "",
+							},
+							"create_date": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"description": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"force_detach_policies": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"inline_policy.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"managed_policy_arns.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"max_session_duration": {
+								"computed": false,
+								"new":      "3600",
+								"old":      "",
+							},
+							"name": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"name_prefix": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"path": {
+								"computed": false,
+								"new":      "/",
+								"old":      "",
+							},
+							"permissions_boundary": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"tags": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"tags_all.%": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"unique_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_iam_user": {
+				"user": {
+					0: {
+						"applied": {
+							"force_destroy":        false,
+							"name":                 "xm-iac-tool-testing",
+							"path":                 "/",
+							"permissions_boundary": null,
+							"tags":                 null,
+						},
+						"destroy": false,
+						"diff": {
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"force_destroy": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"name": {
+								"computed": false,
+								"new":      "xm-iac-tool-testing",
+								"old":      "",
+							},
+							"path": {
+								"computed": false,
+								"new":      "/",
+								"old":      "",
+							},
+							"permissions_boundary": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"tags": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"tags_all.%": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"unique_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_iam_user_policy_attachment": {
+				"attachment": {
+					0: {
+						"applied": {
+							"user": "xm-iac-tool-testing",
+						},
+						"destroy": false,
+						"diff": {
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"policy_arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"user": {
+								"computed": false,
+								"new":      "xm-iac-tool-testing",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_instance": {
+				"ec2": {
+					0: {
+						"applied": {
+							"ami": "ami-0ed752ea0f62749af",
+							"associate_public_ip_address": true,
+							"credit_specification":        [],
+							"get_password_data":           false,
+							"hibernation":                 null,
+							"instance_type":               "t3.micro",
+							"launch_template":             [],
+							"root_block_device": [
+								{
+									"delete_on_termination": true,
+									"encrypted":             true,
+									"tags":                  null,
+									"volume_type":           "gp3",
+								},
+							],
+							"source_dest_check":           true,
+							"subnet_id":                   "subnet-053986b0c1187eb00",
+							"tags":                        null,
+							"timeouts":                    null,
+							"user_data_replace_on_change": false,
+							"volume_tags":                 null,
+						},
+						"destroy": false,
+						"diff": {
+							"ami": {
+								"computed": false,
+								"new":      "ami-0ed752ea0f62749af",
+								"old":      "",
+							},
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"associate_public_ip_address": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"availability_zone": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"capacity_reservation_specification.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"cpu_core_count": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"cpu_options.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"cpu_threads_per_core": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"credit_specification.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"disable_api_stop": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"disable_api_termination": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"ebs_block_device.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"ebs_optimized": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"enclave_options.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"ephemeral_block_device.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"get_password_data": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"hibernation": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"host_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"host_resource_group_arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"iam_instance_profile": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"instance_initiated_shutdown_behavior": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"instance_lifecycle": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"instance_market_options.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"instance_state": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"instance_type": {
+								"computed": false,
+								"new":      "t3.micro",
+								"old":      "",
+							},
+							"ipv6_address_count": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"ipv6_addresses.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"key_name": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"launch_template.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"maintenance_options.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"metadata_options.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"monitoring": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"network_interface.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"outpost_arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"password_data": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"placement_group": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"placement_partition_number": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"primary_network_interface_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"private_dns": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"private_dns_name_options.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"private_ip": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"public_dns": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"public_ip": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"root_block_device.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"root_block_device.0.%": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"root_block_device.0.delete_on_termination": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"root_block_device.0.device_name": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"root_block_device.0.encrypted": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"root_block_device.0.iops": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"root_block_device.0.kms_key_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"root_block_device.0.tags": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"root_block_device.0.throughput": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"root_block_device.0.volume_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"root_block_device.0.volume_size": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"root_block_device.0.volume_type": {
+								"computed": false,
+								"new":      "gp3",
+								"old":      "",
+							},
+							"secondary_private_ips.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"security_groups.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"source_dest_check": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"spot_instance_request_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"subnet_id": {
+								"computed": false,
+								"new":      "subnet-053986b0c1187eb00",
+								"old":      "",
+							},
+							"tags": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"tags_all.%": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"tenancy": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"timeouts": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"user_data": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"user_data_base64": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"user_data_replace_on_change": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"volume_tags": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"vpc_security_group_ids.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_kms_alias": {
+				"key": {
+					0: {
+						"applied": {
+							"name": "alias/xm-iac-tool-testing",
+						},
+						"destroy": false,
+						"diff": {
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"name": {
+								"computed": false,
+								"new":      "alias/xm-iac-tool-testing",
+								"old":      "",
+							},
+							"name_prefix": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"target_key_arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"target_key_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_kms_key": {
+				"key": {
+					0: {
+						"applied": {
+							"bypass_policy_lockout_safety_check": false,
+							"custom_key_store_id":                null,
+							"customer_master_key_spec":           "SYMMETRIC_DEFAULT",
+							"deletion_window_in_days":            null,
+							"enable_key_rotation":                false,
+							"is_enabled":                         true,
+							"key_usage":                          "ENCRYPT_DECRYPT",
+							"tags":                               null,
+						},
+						"destroy": false,
+						"diff": {
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"bypass_policy_lockout_safety_check": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"custom_key_store_id": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"customer_master_key_spec": {
+								"computed": false,
+								"new":      "SYMMETRIC_DEFAULT",
+								"old":      "",
+							},
+							"deletion_window_in_days": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"description": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"enable_key_rotation": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"is_enabled": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"key_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"key_usage": {
+								"computed": false,
+								"new":      "ENCRYPT_DECRYPT",
+								"old":      "",
+							},
+							"multi_region": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"policy": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"tags": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"tags_all.%": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+				"objects": {
+					0: {
+						"applied": {
+							"bypass_policy_lockout_safety_check": false,
+							"custom_key_store_id":                null,
+							"customer_master_key_spec":           "SYMMETRIC_DEFAULT",
+							"deletion_window_in_days":            7,
+							"description":                        "KMS key is used to encrypt bucket objects",
+							"enable_key_rotation":                false,
+							"is_enabled":                         true,
+							"key_usage":                          "ENCRYPT_DECRYPT",
+							"tags":                               null,
+						},
+						"destroy": false,
+						"diff": {
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"bypass_policy_lockout_safety_check": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"custom_key_store_id": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"customer_master_key_spec": {
+								"computed": false,
+								"new":      "SYMMETRIC_DEFAULT",
+								"old":      "",
+							},
+							"deletion_window_in_days": {
+								"computed": false,
+								"new":      "7",
+								"old":      "",
+							},
+							"description": {
+								"computed": false,
+								"new":      "KMS key is used to encrypt bucket objects",
+								"old":      "",
+							},
+							"enable_key_rotation": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"is_enabled": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"key_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"key_usage": {
+								"computed": false,
+								"new":      "ENCRYPT_DECRYPT",
+								"old":      "",
+							},
+							"multi_region": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"policy": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"tags": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"tags_all.%": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_rds_cluster": {
+				"rds": {
+					0: {
+						"applied": {
+							"allow_major_version_upgrade":      null,
+							"backtrack_window":                 null,
+							"backup_retention_period":          1,
+							"cluster_identifier":               "xmiactooltesting",
+							"copy_tags_to_snapshot":            false,
+							"database_name":                    "xmiactooltesting",
+							"db_cluster_instance_class":        null,
+							"db_instance_parameter_group_name": null,
+							"deletion_protection":              null,
+							"enable_global_write_forwarding":   false,
+							"enable_http_endpoint":             false,
+							"enabled_cloudwatch_logs_exports":  null,
+							"engine":                              "aurora-postgresql",
+							"engine_mode":                         "provisioned",
+							"engine_version":                      "13.6",
+							"final_snapshot_identifier":           null,
+							"global_cluster_identifier":           null,
+							"iam_database_authentication_enabled": null,
+							"iops": null,
+							"manage_master_user_password":        null,
+							"master_password":                    "REDACTED_SENSITIVE",
+							"master_username":                    "username",
+							"replication_source_identifier":      null,
+							"restore_to_point_in_time":           [],
+							"s3_import":                          [],
+							"scaling_configuration":              [],
+							"serverlessv2_scaling_configuration": [],
+							"skip_final_snapshot":                true,
+							"snapshot_identifier":                null,
+							"source_region":                      null,
+							"storage_encrypted":                  true,
+							"tags":                               null,
+							"timeouts":                           null,
+						},
+						"destroy": false,
+						"diff": {
+							"allocated_storage": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"allow_major_version_upgrade": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"apply_immediately": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"availability_zones.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"backtrack_window": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"backup_retention_period": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"cluster_identifier": {
+								"computed": false,
+								"new":      "xmiactooltesting",
+								"old":      "",
+							},
+							"cluster_identifier_prefix": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"cluster_members.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"cluster_resource_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"copy_tags_to_snapshot": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"database_name": {
+								"computed": false,
+								"new":      "xmiactooltesting",
+								"old":      "",
+							},
+							"db_cluster_instance_class": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"db_cluster_parameter_group_name": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"db_instance_parameter_group_name": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"db_subnet_group_name": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"db_system_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"deletion_protection": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"enable_global_write_forwarding": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"enable_http_endpoint": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"enabled_cloudwatch_logs_exports": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"endpoint": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"engine": {
+								"computed": false,
+								"new":      "aurora-postgresql",
+								"old":      "",
+							},
+							"engine_mode": {
+								"computed": false,
+								"new":      "provisioned",
+								"old":      "",
+							},
+							"engine_version": {
+								"computed": false,
+								"new":      "13.6",
+								"old":      "",
+							},
+							"engine_version_actual": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"final_snapshot_identifier": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"global_cluster_identifier": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"hosted_zone_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"iam_database_authentication_enabled": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"iam_roles.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"iops": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"kms_key_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"manage_master_user_password": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"master_password": {
+								"computed": false,
+								"new":      "REDACTED_SENSITIVE",
+								"old":      "",
+							},
+							"master_user_secret.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"master_user_secret_kms_key_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"master_username": {
+								"computed": false,
+								"new":      "username",
+								"old":      "",
+							},
+							"network_type": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"port": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"preferred_backup_window": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"preferred_maintenance_window": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"reader_endpoint": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"replication_source_identifier": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"restore_to_point_in_time.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"s3_import.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"scaling_configuration.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"serverlessv2_scaling_configuration.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"skip_final_snapshot": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"snapshot_identifier": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"source_region": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"storage_encrypted": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"storage_type": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"tags": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"tags_all.%": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"timeouts": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"vpc_security_group_ids.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_rds_cluster_parameter_group": {
+				"aurora_mysql": {
+					0: {
+						"applied": {
+							"description": "Managed by Terraform",
+							"family":      "aurora-mysql8.0",
+							"name":        "rds-aurora-mysql",
+							"parameter": [
+								{
+									"apply_method": "immediate",
+									"name":         "require_secure_transport",
+									"value":        "OFF",
+								},
+							],
+							"tags": null,
+						},
+						"destroy": false,
+						"diff": {
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"description": {
+								"computed": false,
+								"new":      "Managed by Terraform",
+								"old":      "",
+							},
+							"family": {
+								"computed": false,
+								"new":      "aurora-mysql8.0",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"name": {
+								"computed": false,
+								"new":      "rds-aurora-mysql",
+								"old":      "",
+							},
+							"name_prefix": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"parameter.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"parameter.0.%": {
+								"computed": false,
+								"new":      "3",
+								"old":      "",
+							},
+							"parameter.0.apply_method": {
+								"computed": false,
+								"new":      "immediate",
+								"old":      "",
+							},
+							"parameter.0.name": {
+								"computed": false,
+								"new":      "require_secure_transport",
+								"old":      "",
+							},
+							"parameter.0.value": {
+								"computed": false,
+								"new":      "OFF",
+								"old":      "",
+							},
+							"tags": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"tags_all.%": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_security_group": {
+				"ec2_sg": {
+					0: {
+						"applied": {
+							"description": "Purposely malformed security group",
+							"egress": [
+								{
+									"cidr_blocks": [
+										"0.0.0.0/0",
+									],
+									"description": "",
+									"from_port":   0,
+									"ipv6_cidr_blocks": [
+										"::/0",
+									],
+									"prefix_list_ids": [],
+									"protocol":        "-1",
+									"security_groups": [],
+									"self":            false,
+									"to_port":         0,
+								},
+							],
+							"ingress": [
+								{
+									"cidr_blocks": [
+										"0.0.0.0/0",
+									],
+									"description": "Allow All",
+									"from_port":   0,
+									"ipv6_cidr_blocks": [
+										"::/0",
+									],
+									"prefix_list_ids": [],
+									"protocol":        "-1",
+									"security_groups": [],
+									"self":            false,
+									"to_port":         0,
+								},
+							],
+							"name": "BadEC2SG",
+							"revoke_rules_on_delete": false,
+							"tags":     null,
+							"timeouts": null,
+							"vpc_id":   "vpc-061a32e760b493dd6",
+						},
+						"destroy": false,
+						"diff": {
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"description": {
+								"computed": false,
+								"new":      "Purposely malformed security group",
+								"old":      "",
+							},
+							"egress.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"egress.0.%": {
+								"computed": false,
+								"new":      "9",
+								"old":      "",
+							},
+							"egress.0.cidr_blocks.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"egress.0.cidr_blocks.0": {
+								"computed": false,
+								"new":      "0.0.0.0/0",
+								"old":      "",
+							},
+							"egress.0.description": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"egress.0.from_port": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"egress.0.ipv6_cidr_blocks.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"egress.0.ipv6_cidr_blocks.0": {
+								"computed": false,
+								"new":      "::/0",
+								"old":      "",
+							},
+							"egress.0.prefix_list_ids.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"egress.0.protocol": {
+								"computed": false,
+								"new":      "-1",
+								"old":      "",
+							},
+							"egress.0.security_groups.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"egress.0.self": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"egress.0.to_port": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"ingress.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"ingress.0.%": {
+								"computed": false,
+								"new":      "9",
+								"old":      "",
+							},
+							"ingress.0.cidr_blocks.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"ingress.0.cidr_blocks.0": {
+								"computed": false,
+								"new":      "0.0.0.0/0",
+								"old":      "",
+							},
+							"ingress.0.description": {
+								"computed": false,
+								"new":      "Allow All",
+								"old":      "",
+							},
+							"ingress.0.from_port": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"ingress.0.ipv6_cidr_blocks.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"ingress.0.ipv6_cidr_blocks.0": {
+								"computed": false,
+								"new":      "::/0",
+								"old":      "",
+							},
+							"ingress.0.prefix_list_ids.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"ingress.0.protocol": {
+								"computed": false,
+								"new":      "-1",
+								"old":      "",
+							},
+							"ingress.0.security_groups.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"ingress.0.self": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"ingress.0.to_port": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"name": {
+								"computed": false,
+								"new":      "BadEC2SG",
+								"old":      "",
+							},
+							"name_prefix": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"owner_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"revoke_rules_on_delete": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"tags": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"tags_all.%": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"timeouts": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"vpc_id": {
+								"computed": false,
+								"new":      "vpc-061a32e760b493dd6",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+				"rds_sg": {
+					0: {
+						"applied": {
+							"description": "Purposely malformed security group",
+							"egress": [
+								{
+									"cidr_blocks": [
+										"0.0.0.0/0",
+									],
+									"description": "",
+									"from_port":   0,
+									"ipv6_cidr_blocks": [
+										"::/0",
+									],
+									"prefix_list_ids": [],
+									"protocol":        "-1",
+									"security_groups": [],
+									"self":            false,
+									"to_port":         0,
+								},
+							],
+							"ingress": [
+								{
+									"cidr_blocks": [
+										"0.0.0.0/0",
+									],
+									"description": "Allow All",
+									"from_port":   0,
+									"ipv6_cidr_blocks": [
+										"::/0",
+									],
+									"prefix_list_ids": [],
+									"protocol":        "-1",
+									"security_groups": [],
+									"self":            false,
+									"to_port":         0,
+								},
+							],
+							"name": "BadRDSSG",
+							"revoke_rules_on_delete": false,
+							"tags":     null,
+							"timeouts": null,
+							"vpc_id":   "vpc-061a32e760b493dd6",
+						},
+						"destroy": false,
+						"diff": {
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"description": {
+								"computed": false,
+								"new":      "Purposely malformed security group",
+								"old":      "",
+							},
+							"egress.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"egress.0.%": {
+								"computed": false,
+								"new":      "9",
+								"old":      "",
+							},
+							"egress.0.cidr_blocks.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"egress.0.cidr_blocks.0": {
+								"computed": false,
+								"new":      "0.0.0.0/0",
+								"old":      "",
+							},
+							"egress.0.description": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"egress.0.from_port": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"egress.0.ipv6_cidr_blocks.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"egress.0.ipv6_cidr_blocks.0": {
+								"computed": false,
+								"new":      "::/0",
+								"old":      "",
+							},
+							"egress.0.prefix_list_ids.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"egress.0.protocol": {
+								"computed": false,
+								"new":      "-1",
+								"old":      "",
+							},
+							"egress.0.security_groups.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"egress.0.self": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"egress.0.to_port": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"ingress.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"ingress.0.%": {
+								"computed": false,
+								"new":      "9",
+								"old":      "",
+							},
+							"ingress.0.cidr_blocks.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"ingress.0.cidr_blocks.0": {
+								"computed": false,
+								"new":      "0.0.0.0/0",
+								"old":      "",
+							},
+							"ingress.0.description": {
+								"computed": false,
+								"new":      "Allow All",
+								"old":      "",
+							},
+							"ingress.0.from_port": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"ingress.0.ipv6_cidr_blocks.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"ingress.0.ipv6_cidr_blocks.0": {
+								"computed": false,
+								"new":      "::/0",
+								"old":      "",
+							},
+							"ingress.0.prefix_list_ids.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"ingress.0.protocol": {
+								"computed": false,
+								"new":      "-1",
+								"old":      "",
+							},
+							"ingress.0.security_groups.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"ingress.0.self": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"ingress.0.to_port": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"name": {
+								"computed": false,
+								"new":      "BadRDSSG",
+								"old":      "",
+							},
+							"name_prefix": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"owner_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"revoke_rules_on_delete": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"tags": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"tags_all.%": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"timeouts": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"vpc_id": {
+								"computed": false,
+								"new":      "vpc-061a32e760b493dd6",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"random_pet": {
+				"this": {
+					0: {
+						"applied": {
+							"keepers":   null,
+							"length":    2,
+							"prefix":    null,
+							"separator": "-",
+						},
+						"destroy": false,
+						"diff": {
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"keepers": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"length": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"prefix": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"separator": {
+								"computed": false,
+								"new":      "-",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+		},
+	},
+
+	"module.s3_bucket": {
+		"data": {
+			"aws_iam_policy_document": {
+				"combined": {
+					0: {
+						"applied": {
+							"override_policy_documents": null,
+							"policy_id":                 null,
+							"statement":                 [],
+							"version":                   null,
+						},
+						"destroy": false,
+						"diff": {
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"json": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"override_policy_documents": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"policy_id": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"source_policy_documents.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"statement.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"version": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+				"deny_incorrect_encryption_headers": {
+					0: {
+						"applied": {
+							"override_policy_documents": null,
+							"policy_id":                 null,
+							"source_policy_documents":   null,
+							"statement": [
+								{
+									"actions": [
+										"s3:PutObject",
+									],
+									"condition": [
+										{
+											"test": "StringNotEquals",
+											"values": [
+												"aws:kms",
+											],
+											"variable": "s3:x-amz-server-side-encryption",
+										},
+									],
+									"effect":         "Deny",
+									"not_actions":    null,
+									"not_principals": [],
+									"not_resources":  null,
+									"principals": [
+										{
+											"identifiers": [
+												"*",
+											],
+											"type": "*",
+										},
+									],
+									"resources": [
+										null,
+									],
+									"sid": "denyIncorrectEncryptionHeaders",
+								},
+							],
+							"version": null,
+						},
+						"destroy": false,
+						"diff": {
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"json": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"override_policy_documents": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"policy_id": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"source_policy_documents": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"statement.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"statement.0.%": {
+								"computed": false,
+								"new":      "9",
+								"old":      "",
+							},
+							"statement.0.actions.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"statement.0.actions.0": {
+								"computed": false,
+								"new":      "s3:PutObject",
+								"old":      "",
+							},
+							"statement.0.condition.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"statement.0.condition.0.%": {
+								"computed": false,
+								"new":      "3",
+								"old":      "",
+							},
+							"statement.0.condition.0.test": {
+								"computed": false,
+								"new":      "StringNotEquals",
+								"old":      "",
+							},
+							"statement.0.condition.0.values.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"statement.0.condition.0.values.0": {
+								"computed": false,
+								"new":      "aws:kms",
+								"old":      "",
+							},
+							"statement.0.condition.0.variable": {
+								"computed": false,
+								"new":      "s3:x-amz-server-side-encryption",
+								"old":      "",
+							},
+							"statement.0.effect": {
+								"computed": false,
+								"new":      "Deny",
+								"old":      "",
+							},
+							"statement.0.not_actions": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"statement.0.not_principals.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"statement.0.not_resources": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"statement.0.principals.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"statement.0.principals.0.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"statement.0.principals.0.identifiers.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"statement.0.principals.0.identifiers.0": {
+								"computed": false,
+								"new":      "*",
+								"old":      "",
+							},
+							"statement.0.principals.0.type": {
+								"computed": false,
+								"new":      "*",
+								"old":      "",
+							},
+							"statement.0.resources.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"statement.0.sid": {
+								"computed": false,
+								"new":      "denyIncorrectEncryptionHeaders",
+								"old":      "",
+							},
+							"version": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+				"deny_incorrect_kms_key_sse": {
+					0: {
+						"applied": {
+							"override_policy_documents": null,
+							"policy_id":                 null,
+							"source_policy_documents":   null,
+							"statement": [
+								{
+									"actions": [
+										"s3:PutObject",
+									],
+									"condition": [
+										{
+											"test": "StringNotEquals",
+											"values": [
+												null,
+											],
+											"variable": "s3:x-amz-server-side-encryption-aws-kms-key-id",
+										},
+									],
+									"effect":         "Deny",
+									"not_actions":    null,
+									"not_principals": [],
+									"not_resources":  null,
+									"principals": [
+										{
+											"identifiers": [
+												"*",
+											],
+											"type": "*",
+										},
+									],
+									"resources": [
+										null,
+									],
+									"sid": "denyIncorrectKmsKeySse",
+								},
+							],
+							"version": null,
+						},
+						"destroy": false,
+						"diff": {
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"json": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"override_policy_documents": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"policy_id": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"source_policy_documents": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"statement.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"statement.0.%": {
+								"computed": false,
+								"new":      "9",
+								"old":      "",
+							},
+							"statement.0.actions.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"statement.0.actions.0": {
+								"computed": false,
+								"new":      "s3:PutObject",
+								"old":      "",
+							},
+							"statement.0.condition.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"statement.0.condition.0.%": {
+								"computed": false,
+								"new":      "3",
+								"old":      "",
+							},
+							"statement.0.condition.0.test": {
+								"computed": false,
+								"new":      "StringNotEquals",
+								"old":      "",
+							},
+							"statement.0.condition.0.values.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"statement.0.condition.0.variable": {
+								"computed": false,
+								"new":      "s3:x-amz-server-side-encryption-aws-kms-key-id",
+								"old":      "",
+							},
+							"statement.0.effect": {
+								"computed": false,
+								"new":      "Deny",
+								"old":      "",
+							},
+							"statement.0.not_actions": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"statement.0.not_principals.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"statement.0.not_resources": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"statement.0.principals.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"statement.0.principals.0.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"statement.0.principals.0.identifiers.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"statement.0.principals.0.identifiers.0": {
+								"computed": false,
+								"new":      "*",
+								"old":      "",
+							},
+							"statement.0.principals.0.type": {
+								"computed": false,
+								"new":      "*",
+								"old":      "",
+							},
+							"statement.0.resources.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"statement.0.sid": {
+								"computed": false,
+								"new":      "denyIncorrectKmsKeySse",
+								"old":      "",
+							},
+							"version": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+				"deny_insecure_transport": {
+					0: {
+						"applied": {
+							"override_policy_documents": null,
+							"policy_id":                 null,
+							"source_policy_documents":   null,
+							"statement": [
+								{
+									"actions": [
+										"s3:*",
+									],
+									"condition": [
+										{
+											"test": "Bool",
+											"values": [
+												"false",
+											],
+											"variable": "aws:SecureTransport",
+										},
+									],
+									"effect":         "Deny",
+									"not_actions":    null,
+									"not_principals": [],
+									"not_resources":  null,
+									"principals": [
+										{
+											"identifiers": [
+												"*",
+											],
+											"type": "*",
+										},
+									],
+									"resources": [
+										null,
+										null,
+									],
+									"sid": "denyInsecureTransport",
+								},
+							],
+							"version": null,
+						},
+						"destroy": false,
+						"diff": {
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"json": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"override_policy_documents": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"policy_id": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"source_policy_documents": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"statement.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"statement.0.%": {
+								"computed": false,
+								"new":      "9",
+								"old":      "",
+							},
+							"statement.0.actions.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"statement.0.actions.0": {
+								"computed": false,
+								"new":      "s3:*",
+								"old":      "",
+							},
+							"statement.0.condition.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"statement.0.condition.0.%": {
+								"computed": false,
+								"new":      "3",
+								"old":      "",
+							},
+							"statement.0.condition.0.test": {
+								"computed": false,
+								"new":      "Bool",
+								"old":      "",
+							},
+							"statement.0.condition.0.values.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"statement.0.condition.0.values.0": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"statement.0.condition.0.variable": {
+								"computed": false,
+								"new":      "aws:SecureTransport",
+								"old":      "",
+							},
+							"statement.0.effect": {
+								"computed": false,
+								"new":      "Deny",
+								"old":      "",
+							},
+							"statement.0.not_actions": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"statement.0.not_principals.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"statement.0.not_resources": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"statement.0.principals.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"statement.0.principals.0.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"statement.0.principals.0.identifiers.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"statement.0.principals.0.identifiers.0": {
+								"computed": false,
+								"new":      "*",
+								"old":      "",
+							},
+							"statement.0.principals.0.type": {
+								"computed": false,
+								"new":      "*",
+								"old":      "",
+							},
+							"statement.0.resources.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"statement.0.sid": {
+								"computed": false,
+								"new":      "denyInsecureTransport",
+								"old":      "",
+							},
+							"version": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+				"deny_unencrypted_object_uploads": {
+					0: {
+						"applied": {
+							"override_policy_documents": null,
+							"policy_id":                 null,
+							"source_policy_documents":   null,
+							"statement": [
+								{
+									"actions": [
+										"s3:PutObject",
+									],
+									"condition": [
+										{
+											"test": "Null",
+											"values": [
+												"true",
+											],
+											"variable": "s3:x-amz-server-side-encryption",
+										},
+									],
+									"effect":         "Deny",
+									"not_actions":    null,
+									"not_principals": [],
+									"not_resources":  null,
+									"principals": [
+										{
+											"identifiers": [
+												"*",
+											],
+											"type": "*",
+										},
+									],
+									"resources": [
+										null,
+									],
+									"sid": "denyUnencryptedObjectUploads",
+								},
+							],
+							"version": null,
+						},
+						"destroy": false,
+						"diff": {
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"json": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"override_policy_documents": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"policy_id": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"source_policy_documents": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"statement.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"statement.0.%": {
+								"computed": false,
+								"new":      "9",
+								"old":      "",
+							},
+							"statement.0.actions.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"statement.0.actions.0": {
+								"computed": false,
+								"new":      "s3:PutObject",
+								"old":      "",
+							},
+							"statement.0.condition.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"statement.0.condition.0.%": {
+								"computed": false,
+								"new":      "3",
+								"old":      "",
+							},
+							"statement.0.condition.0.test": {
+								"computed": false,
+								"new":      "Null",
+								"old":      "",
+							},
+							"statement.0.condition.0.values.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"statement.0.condition.0.values.0": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"statement.0.condition.0.variable": {
+								"computed": false,
+								"new":      "s3:x-amz-server-side-encryption",
+								"old":      "",
+							},
+							"statement.0.effect": {
+								"computed": false,
+								"new":      "Deny",
+								"old":      "",
+							},
+							"statement.0.not_actions": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"statement.0.not_principals.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"statement.0.not_resources": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"statement.0.principals.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"statement.0.principals.0.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"statement.0.principals.0.identifiers.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"statement.0.principals.0.identifiers.0": {
+								"computed": false,
+								"new":      "*",
+								"old":      "",
+							},
+							"statement.0.principals.0.type": {
+								"computed": false,
+								"new":      "*",
+								"old":      "",
+							},
+							"statement.0.resources.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"statement.0.sid": {
+								"computed": false,
+								"new":      "denyUnencryptedObjectUploads",
+								"old":      "",
+							},
+							"version": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+				"require_latest_tls": {
+					0: {
+						"applied": {
+							"override_policy_documents": null,
+							"policy_id":                 null,
+							"source_policy_documents":   null,
+							"statement": [
+								{
+									"actions": [
+										"s3:*",
+									],
+									"condition": [
+										{
+											"test": "NumericLessThan",
+											"values": [
+												"1.2",
+											],
+											"variable": "s3:TlsVersion",
+										},
+									],
+									"effect":         "Deny",
+									"not_actions":    null,
+									"not_principals": [],
+									"not_resources":  null,
+									"principals": [
+										{
+											"identifiers": [
+												"*",
+											],
+											"type": "*",
+										},
+									],
+									"resources": [
+										null,
+										null,
+									],
+									"sid": "denyOutdatedTLS",
+								},
+							],
+							"version": null,
+						},
+						"destroy": false,
+						"diff": {
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"json": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"override_policy_documents": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"policy_id": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"source_policy_documents": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"statement.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"statement.0.%": {
+								"computed": false,
+								"new":      "9",
+								"old":      "",
+							},
+							"statement.0.actions.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"statement.0.actions.0": {
+								"computed": false,
+								"new":      "s3:*",
+								"old":      "",
+							},
+							"statement.0.condition.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"statement.0.condition.0.%": {
+								"computed": false,
+								"new":      "3",
+								"old":      "",
+							},
+							"statement.0.condition.0.test": {
+								"computed": false,
+								"new":      "NumericLessThan",
+								"old":      "",
+							},
+							"statement.0.condition.0.values.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"statement.0.condition.0.values.0": {
+								"computed": false,
+								"new":      "1.2",
+								"old":      "",
+							},
+							"statement.0.condition.0.variable": {
+								"computed": false,
+								"new":      "s3:TlsVersion",
+								"old":      "",
+							},
+							"statement.0.effect": {
+								"computed": false,
+								"new":      "Deny",
+								"old":      "",
+							},
+							"statement.0.not_actions": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"statement.0.not_principals.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"statement.0.not_resources": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"statement.0.principals.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"statement.0.principals.0.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"statement.0.principals.0.identifiers.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"statement.0.principals.0.identifiers.0": {
+								"computed": false,
+								"new":      "*",
+								"old":      "",
+							},
+							"statement.0.principals.0.type": {
+								"computed": false,
+								"new":      "*",
+								"old":      "",
+							},
+							"statement.0.resources.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"statement.0.sid": {
+								"computed": false,
+								"new":      "denyOutdatedTLS",
+								"old":      "",
+							},
+							"version": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+		},
+		"path": [
+			"s3_bucket",
+		],
+		"resources": {
+			"aws_s3_bucket": {
+				"this": {
+					0: {
+						"applied": {
+							"force_destroy":       true,
+							"object_lock_enabled": true,
+							"tags": {
+								"Classification": "Anton",
+							},
+							"tags_all": {
+								"Classification": "Anton",
+							},
+							"timeouts": null,
+						},
+						"destroy": false,
+						"diff": {
+							"acceleration_status": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"acl": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"bucket": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"bucket_domain_name": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"bucket_prefix": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"bucket_regional_domain_name": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"cors_rule.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"force_destroy": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"grant.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"hosted_zone_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"lifecycle_rule.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"logging.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"object_lock_configuration.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"object_lock_enabled": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"policy": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"region": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"replication_configuration.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"request_payer": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"server_side_encryption_configuration.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"tags.%": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"tags.Classification": {
+								"computed": false,
+								"new":      "Anton",
+								"old":      "",
+							},
+							"tags_all.%": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"tags_all.Classification": {
+								"computed": false,
+								"new":      "Anton",
+								"old":      "",
+							},
+							"timeouts": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"versioning.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"website.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"website_domain": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"website_endpoint": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_s3_bucket_accelerate_configuration": {
+				"this": {
+					0: {
+						"applied": {
+							"expected_bucket_owner": "874037324847",
+							"status":                "Suspended",
+						},
+						"destroy": false,
+						"diff": {
+							"bucket": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"expected_bucket_owner": {
+								"computed": false,
+								"new":      "874037324847",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"status": {
+								"computed": false,
+								"new":      "Suspended",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_s3_bucket_acl": {
+				"this": {
+					0: {
+						"applied": {
+							"acl": "private",
+							"expected_bucket_owner": "874037324847",
+						},
+						"destroy": false,
+						"diff": {
+							"access_control_policy.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"acl": {
+								"computed": false,
+								"new":      "private",
+								"old":      "",
+							},
+							"bucket": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"expected_bucket_owner": {
+								"computed": false,
+								"new":      "874037324847",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_s3_bucket_cors_configuration": {
+				"this": {
+					0: {
+						"applied": {
+							"cors_rule": [
+								{
+									"allowed_headers": [
+										"*",
+									],
+									"allowed_methods": [
+										"POST",
+										"PUT",
+									],
+									"allowed_origins": [
+										"https://modules.tf",
+										"https://terraform-aws-modules.modules.tf",
+									],
+									"expose_headers": [
+										"ETag",
+									],
+									"id":              "",
+									"max_age_seconds": 3000,
+								},
+								{
+									"allowed_headers": [
+										"*",
+									],
+									"allowed_methods": [
+										"PUT",
+									],
+									"allowed_origins": [
+										"https://example.com",
+									],
+									"expose_headers": [
+										"ETag",
+									],
+									"id":              "",
+									"max_age_seconds": 3000,
+								},
+							],
+							"expected_bucket_owner": "874037324847",
+						},
+						"destroy": false,
+						"diff": {
+							"bucket": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"cors_rule.#": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"cors_rule.0.%": {
+								"computed": false,
+								"new":      "6",
+								"old":      "",
+							},
+							"cors_rule.0.allowed_headers.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"cors_rule.0.allowed_headers.0": {
+								"computed": false,
+								"new":      "*",
+								"old":      "",
+							},
+							"cors_rule.0.allowed_methods.#": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"cors_rule.0.allowed_methods.0": {
+								"computed": false,
+								"new":      "POST",
+								"old":      "",
+							},
+							"cors_rule.0.allowed_methods.1": {
+								"computed": false,
+								"new":      "PUT",
+								"old":      "",
+							},
+							"cors_rule.0.allowed_origins.#": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"cors_rule.0.allowed_origins.0": {
+								"computed": false,
+								"new":      "https://modules.tf",
+								"old":      "",
+							},
+							"cors_rule.0.allowed_origins.1": {
+								"computed": false,
+								"new":      "https://terraform-aws-modules.modules.tf",
+								"old":      "",
+							},
+							"cors_rule.0.expose_headers.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"cors_rule.0.expose_headers.0": {
+								"computed": false,
+								"new":      "ETag",
+								"old":      "",
+							},
+							"cors_rule.0.id": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"cors_rule.0.max_age_seconds": {
+								"computed": false,
+								"new":      "3000",
+								"old":      "",
+							},
+							"cors_rule.1.%": {
+								"computed": false,
+								"new":      "6",
+								"old":      "",
+							},
+							"cors_rule.1.allowed_headers.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"cors_rule.1.allowed_headers.0": {
+								"computed": false,
+								"new":      "*",
+								"old":      "",
+							},
+							"cors_rule.1.allowed_methods.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"cors_rule.1.allowed_methods.0": {
+								"computed": false,
+								"new":      "PUT",
+								"old":      "",
+							},
+							"cors_rule.1.allowed_origins.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"cors_rule.1.allowed_origins.0": {
+								"computed": false,
+								"new":      "https://example.com",
+								"old":      "",
+							},
+							"cors_rule.1.expose_headers.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"cors_rule.1.expose_headers.0": {
+								"computed": false,
+								"new":      "ETag",
+								"old":      "",
+							},
+							"cors_rule.1.id": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"cors_rule.1.max_age_seconds": {
+								"computed": false,
+								"new":      "3000",
+								"old":      "",
+							},
+							"expected_bucket_owner": {
+								"computed": false,
+								"new":      "874037324847",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_s3_bucket_intelligent_tiering_configuration": {
+				"this": {
+					"documents": {
+						"applied": {
+							"filter": [
+								{
+									"prefix": "documents/",
+									"tags":   null,
+								},
+							],
+							"name":   "documents",
+							"status": "Disabled",
+							"tiering": [
+								{
+									"access_tier": "ARCHIVE_ACCESS",
+									"days":        125,
+								},
+								{
+									"access_tier": "DEEP_ARCHIVE_ACCESS",
+									"days":        200,
+								},
+							],
+						},
+						"destroy": false,
+						"diff": {
+							"bucket": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"filter.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"filter.0.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"filter.0.prefix": {
+								"computed": false,
+								"new":      "documents/",
+								"old":      "",
+							},
+							"filter.0.tags": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"name": {
+								"computed": false,
+								"new":      "documents",
+								"old":      "",
+							},
+							"status": {
+								"computed": false,
+								"new":      "Disabled",
+								"old":      "",
+							},
+							"tiering.#": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"tiering.0.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"tiering.0.access_tier": {
+								"computed": false,
+								"new":      "ARCHIVE_ACCESS",
+								"old":      "",
+							},
+							"tiering.0.days": {
+								"computed": false,
+								"new":      "125",
+								"old":      "",
+							},
+							"tiering.1.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"tiering.1.access_tier": {
+								"computed": false,
+								"new":      "DEEP_ARCHIVE_ACCESS",
+								"old":      "",
+							},
+							"tiering.1.days": {
+								"computed": false,
+								"new":      "200",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+					"general": {
+						"applied": {
+							"filter": [
+								{
+									"prefix": "/",
+									"tags": {
+										"Environment": "dev",
+									},
+								},
+							],
+							"name":   "general",
+							"status": "Enabled",
+							"tiering": [
+								{
+									"access_tier": "ARCHIVE_ACCESS",
+									"days":        180,
+								},
+							],
+						},
+						"destroy": false,
+						"diff": {
+							"bucket": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"filter.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"filter.0.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"filter.0.prefix": {
+								"computed": false,
+								"new":      "/",
+								"old":      "",
+							},
+							"filter.0.tags.%": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"filter.0.tags.Environment": {
+								"computed": false,
+								"new":      "dev",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"name": {
+								"computed": false,
+								"new":      "general",
+								"old":      "",
+							},
+							"status": {
+								"computed": false,
+								"new":      "Enabled",
+								"old":      "",
+							},
+							"tiering.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"tiering.0.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"tiering.0.access_tier": {
+								"computed": false,
+								"new":      "ARCHIVE_ACCESS",
+								"old":      "",
+							},
+							"tiering.0.days": {
+								"computed": false,
+								"new":      "180",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_s3_bucket_lifecycle_configuration": {
+				"this": {
+					0: {
+						"applied": {
+							"expected_bucket_owner": "874037324847",
+							"rule": [
+								{
+									"abort_incomplete_multipart_upload": [],
+									"expiration":                        [],
+									"filter": [
+										{
+											"and": [
+												{
+													"object_size_greater_than": null,
+													"object_size_less_than":    null,
+													"prefix":                   null,
+													"tags": {
+														"another": "value2",
+														"some":    "value",
+													},
+												},
+											],
+											"object_size_greater_than": null,
+											"object_size_less_than":    null,
+											"prefix":                   null,
+											"tag":                      [],
+										},
+									],
+									"id": "log",
+									"noncurrent_version_expiration": [],
+									"noncurrent_version_transition": [],
+									"prefix":                        null,
+									"status":                        "Enabled",
+									"transition": [
+										{
+											"date":          "",
+											"days":          30,
+											"storage_class": "ONEZONE_IA",
+										},
+										{
+											"date":          "",
+											"days":          60,
+											"storage_class": "GLACIER",
+										},
+									],
+								},
+								{
+									"abort_incomplete_multipart_upload": [
+										{
+											"days_after_initiation": 7,
+										},
+									],
+									"expiration": [],
+									"filter": [
+										{
+											"and": [],
+											"object_size_greater_than": null,
+											"object_size_less_than":    null,
+											"prefix":                   null,
+											"tag":                      [],
+										},
+									],
+									"id": "log1",
+									"noncurrent_version_expiration": [
+										{
+											"newer_noncurrent_versions": null,
+											"noncurrent_days":           300,
+										},
+									],
+									"noncurrent_version_transition": [
+										{
+											"newer_noncurrent_versions": "",
+											"noncurrent_days":           30,
+											"storage_class":             "STANDARD_IA",
+										},
+										{
+											"newer_noncurrent_versions": "",
+											"noncurrent_days":           60,
+											"storage_class":             "ONEZONE_IA",
+										},
+										{
+											"newer_noncurrent_versions": "",
+											"noncurrent_days":           90,
+											"storage_class":             "GLACIER",
+										},
+									],
+									"prefix":     null,
+									"status":     "Enabled",
+									"transition": [],
+								},
+								{
+									"abort_incomplete_multipart_upload": [],
+									"expiration":                        [],
+									"filter": [
+										{
+											"and": [
+												{
+													"object_size_greater_than": 200000,
+													"object_size_less_than":    500000,
+													"prefix":                   "log1/",
+													"tags": {
+														"another": "value2",
+														"some":    "value",
+													},
+												},
+											],
+											"object_size_greater_than": null,
+											"object_size_less_than":    null,
+											"prefix":                   null,
+											"tag":                      [],
+										},
+									],
+									"id": "log2",
+									"noncurrent_version_expiration": [
+										{
+											"newer_noncurrent_versions": null,
+											"noncurrent_days":           300,
+										},
+									],
+									"noncurrent_version_transition": [
+										{
+											"newer_noncurrent_versions": "",
+											"noncurrent_days":           30,
+											"storage_class":             "STANDARD_IA",
+										},
+									],
+									"prefix":     null,
+									"status":     "Enabled",
+									"transition": [],
+								},
+							],
+						},
+						"destroy": false,
+						"diff": {
+							"bucket": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"expected_bucket_owner": {
+								"computed": false,
+								"new":      "874037324847",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"rule.#": {
+								"computed": false,
+								"new":      "3",
+								"old":      "",
+							},
+							"rule.0.%": {
+								"computed": false,
+								"new":      "9",
+								"old":      "",
+							},
+							"rule.0.abort_incomplete_multipart_upload.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"rule.0.expiration.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"rule.0.filter.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"rule.0.filter.0.%": {
+								"computed": false,
+								"new":      "5",
+								"old":      "",
+							},
+							"rule.0.filter.0.and.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"rule.0.filter.0.and.0.%": {
+								"computed": false,
+								"new":      "4",
+								"old":      "",
+							},
+							"rule.0.filter.0.and.0.object_size_greater_than": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"rule.0.filter.0.and.0.object_size_less_than": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"rule.0.filter.0.and.0.prefix": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"rule.0.filter.0.and.0.tags.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"rule.0.filter.0.and.0.tags.another": {
+								"computed": false,
+								"new":      "value2",
+								"old":      "",
+							},
+							"rule.0.filter.0.and.0.tags.some": {
+								"computed": false,
+								"new":      "value",
+								"old":      "",
+							},
+							"rule.0.filter.0.object_size_greater_than": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"rule.0.filter.0.object_size_less_than": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"rule.0.filter.0.prefix": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"rule.0.filter.0.tag.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"rule.0.id": {
+								"computed": false,
+								"new":      "log",
+								"old":      "",
+							},
+							"rule.0.noncurrent_version_expiration.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"rule.0.noncurrent_version_transition.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"rule.0.prefix": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"rule.0.status": {
+								"computed": false,
+								"new":      "Enabled",
+								"old":      "",
+							},
+							"rule.0.transition.#": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"rule.0.transition.0.%": {
+								"computed": false,
+								"new":      "3",
+								"old":      "",
+							},
+							"rule.0.transition.0.date": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"rule.0.transition.0.days": {
+								"computed": false,
+								"new":      "30",
+								"old":      "",
+							},
+							"rule.0.transition.0.storage_class": {
+								"computed": false,
+								"new":      "ONEZONE_IA",
+								"old":      "",
+							},
+							"rule.0.transition.1.%": {
+								"computed": false,
+								"new":      "3",
+								"old":      "",
+							},
+							"rule.0.transition.1.date": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"rule.0.transition.1.days": {
+								"computed": false,
+								"new":      "60",
+								"old":      "",
+							},
+							"rule.0.transition.1.storage_class": {
+								"computed": false,
+								"new":      "GLACIER",
+								"old":      "",
+							},
+							"rule.1.%": {
+								"computed": false,
+								"new":      "9",
+								"old":      "",
+							},
+							"rule.1.abort_incomplete_multipart_upload.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"rule.1.abort_incomplete_multipart_upload.0.%": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"rule.1.abort_incomplete_multipart_upload.0.days_after_initiation": {
+								"computed": false,
+								"new":      "7",
+								"old":      "",
+							},
+							"rule.1.expiration.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"rule.1.filter.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"rule.1.filter.0.%": {
+								"computed": false,
+								"new":      "5",
+								"old":      "",
+							},
+							"rule.1.filter.0.and.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"rule.1.filter.0.object_size_greater_than": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"rule.1.filter.0.object_size_less_than": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"rule.1.filter.0.prefix": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"rule.1.filter.0.tag.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"rule.1.id": {
+								"computed": false,
+								"new":      "log1",
+								"old":      "",
+							},
+							"rule.1.noncurrent_version_expiration.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"rule.1.noncurrent_version_expiration.0.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"rule.1.noncurrent_version_expiration.0.newer_noncurrent_versions": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"rule.1.noncurrent_version_expiration.0.noncurrent_days": {
+								"computed": false,
+								"new":      "300",
+								"old":      "",
+							},
+							"rule.1.noncurrent_version_transition.#": {
+								"computed": false,
+								"new":      "3",
+								"old":      "",
+							},
+							"rule.1.noncurrent_version_transition.0.%": {
+								"computed": false,
+								"new":      "3",
+								"old":      "",
+							},
+							"rule.1.noncurrent_version_transition.0.newer_noncurrent_versions": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"rule.1.noncurrent_version_transition.0.noncurrent_days": {
+								"computed": false,
+								"new":      "30",
+								"old":      "",
+							},
+							"rule.1.noncurrent_version_transition.0.storage_class": {
+								"computed": false,
+								"new":      "STANDARD_IA",
+								"old":      "",
+							},
+							"rule.1.noncurrent_version_transition.1.%": {
+								"computed": false,
+								"new":      "3",
+								"old":      "",
+							},
+							"rule.1.noncurrent_version_transition.1.newer_noncurrent_versions": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"rule.1.noncurrent_version_transition.1.noncurrent_days": {
+								"computed": false,
+								"new":      "60",
+								"old":      "",
+							},
+							"rule.1.noncurrent_version_transition.1.storage_class": {
+								"computed": false,
+								"new":      "ONEZONE_IA",
+								"old":      "",
+							},
+							"rule.1.noncurrent_version_transition.2.%": {
+								"computed": false,
+								"new":      "3",
+								"old":      "",
+							},
+							"rule.1.noncurrent_version_transition.2.newer_noncurrent_versions": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"rule.1.noncurrent_version_transition.2.noncurrent_days": {
+								"computed": false,
+								"new":      "90",
+								"old":      "",
+							},
+							"rule.1.noncurrent_version_transition.2.storage_class": {
+								"computed": false,
+								"new":      "GLACIER",
+								"old":      "",
+							},
+							"rule.1.prefix": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"rule.1.status": {
+								"computed": false,
+								"new":      "Enabled",
+								"old":      "",
+							},
+							"rule.1.transition.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"rule.2.%": {
+								"computed": false,
+								"new":      "9",
+								"old":      "",
+							},
+							"rule.2.abort_incomplete_multipart_upload.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"rule.2.expiration.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"rule.2.filter.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"rule.2.filter.0.%": {
+								"computed": false,
+								"new":      "5",
+								"old":      "",
+							},
+							"rule.2.filter.0.and.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"rule.2.filter.0.and.0.%": {
+								"computed": false,
+								"new":      "4",
+								"old":      "",
+							},
+							"rule.2.filter.0.and.0.object_size_greater_than": {
+								"computed": false,
+								"new":      "200000",
+								"old":      "",
+							},
+							"rule.2.filter.0.and.0.object_size_less_than": {
+								"computed": false,
+								"new":      "500000",
+								"old":      "",
+							},
+							"rule.2.filter.0.and.0.prefix": {
+								"computed": false,
+								"new":      "log1/",
+								"old":      "",
+							},
+							"rule.2.filter.0.and.0.tags.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"rule.2.filter.0.and.0.tags.another": {
+								"computed": false,
+								"new":      "value2",
+								"old":      "",
+							},
+							"rule.2.filter.0.and.0.tags.some": {
+								"computed": false,
+								"new":      "value",
+								"old":      "",
+							},
+							"rule.2.filter.0.object_size_greater_than": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"rule.2.filter.0.object_size_less_than": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"rule.2.filter.0.prefix": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"rule.2.filter.0.tag.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"rule.2.id": {
+								"computed": false,
+								"new":      "log2",
+								"old":      "",
+							},
+							"rule.2.noncurrent_version_expiration.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"rule.2.noncurrent_version_expiration.0.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"rule.2.noncurrent_version_expiration.0.newer_noncurrent_versions": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"rule.2.noncurrent_version_expiration.0.noncurrent_days": {
+								"computed": false,
+								"new":      "300",
+								"old":      "",
+							},
+							"rule.2.noncurrent_version_transition.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"rule.2.noncurrent_version_transition.0.%": {
+								"computed": false,
+								"new":      "3",
+								"old":      "",
+							},
+							"rule.2.noncurrent_version_transition.0.newer_noncurrent_versions": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"rule.2.noncurrent_version_transition.0.noncurrent_days": {
+								"computed": false,
+								"new":      "30",
+								"old":      "",
+							},
+							"rule.2.noncurrent_version_transition.0.storage_class": {
+								"computed": false,
+								"new":      "STANDARD_IA",
+								"old":      "",
+							},
+							"rule.2.prefix": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"rule.2.status": {
+								"computed": false,
+								"new":      "Enabled",
+								"old":      "",
+							},
+							"rule.2.transition.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_s3_bucket_metric": {
+				"this": {
+					"0": {
+						"applied": {
+							"filter": [
+								{
+									"prefix": "documents/",
+									"tags": {
+										"priority": "high",
+									},
+								},
+							],
+							"name": "documents",
+						},
+						"destroy": false,
+						"diff": {
+							"bucket": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"filter.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"filter.0.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"filter.0.prefix": {
+								"computed": false,
+								"new":      "documents/",
+								"old":      "",
+							},
+							"filter.0.tags.%": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"filter.0.tags.priority": {
+								"computed": false,
+								"new":      "high",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"name": {
+								"computed": false,
+								"new":      "documents",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+					"1": {
+						"applied": {
+							"filter": [
+								{
+									"prefix": null,
+									"tags": {
+										"production": "true",
+									},
+								},
+							],
+							"name": "other",
+						},
+						"destroy": false,
+						"diff": {
+							"bucket": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"filter.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"filter.0.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"filter.0.prefix": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"filter.0.tags.%": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"filter.0.tags.production": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"name": {
+								"computed": false,
+								"new":      "other",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+					"2": {
+						"applied": {
+							"filter": [],
+							"name":   "all",
+						},
+						"destroy": false,
+						"diff": {
+							"bucket": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"filter.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"name": {
+								"computed": false,
+								"new":      "all",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_s3_bucket_object_lock_configuration": {
+				"this": {
+					0: {
+						"applied": {
+							"expected_bucket_owner": "874037324847",
+							"object_lock_enabled":   "Enabled",
+							"rule": [
+								{
+									"default_retention": [
+										{
+											"days":  1,
+											"mode":  "GOVERNANCE",
+											"years": null,
+										},
+									],
+								},
+							],
+							"token": "REDACTED_SENSITIVE",
+						},
+						"destroy": false,
+						"diff": {
+							"bucket": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"expected_bucket_owner": {
+								"computed": false,
+								"new":      "874037324847",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"object_lock_enabled": {
+								"computed": false,
+								"new":      "Enabled",
+								"old":      "",
+							},
+							"rule.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"rule.0.%": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"rule.0.default_retention.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"rule.0.default_retention.0.%": {
+								"computed": false,
+								"new":      "3",
+								"old":      "",
+							},
+							"rule.0.default_retention.0.days": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"rule.0.default_retention.0.mode": {
+								"computed": false,
+								"new":      "GOVERNANCE",
+								"old":      "",
+							},
+							"rule.0.default_retention.0.years": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"token": {
+								"computed": false,
+								"new":      "REDACTED_SENSITIVE",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_s3_bucket_ownership_controls": {
+				"this": {
+					0: {
+						"applied": {
+							"rule": [
+								{
+									"object_ownership": "BucketOwnerPreferred",
+								},
+							],
+						},
+						"destroy": false,
+						"diff": {
+							"bucket": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"rule.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"rule.0.%": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"rule.0.object_ownership": {
+								"computed": false,
+								"new":      "BucketOwnerPreferred",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_s3_bucket_policy": {
+				"this": {
+					0: {
+						"applied": {},
+						"destroy": false,
+						"diff": {
+							"bucket": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"policy": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_s3_bucket_public_access_block": {
+				"this": {
+					0: {
+						"applied": {
+							"block_public_acls":       true,
+							"block_public_policy":     true,
+							"ignore_public_acls":      true,
+							"restrict_public_buckets": true,
+						},
+						"destroy": false,
+						"diff": {
+							"block_public_acls": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"block_public_policy": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"bucket": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"ignore_public_acls": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"restrict_public_buckets": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_s3_bucket_request_payment_configuration": {
+				"this": {
+					0: {
+						"applied": {
+							"expected_bucket_owner": "874037324847",
+							"payer":                 "BucketOwner",
+						},
+						"destroy": false,
+						"diff": {
+							"bucket": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"expected_bucket_owner": {
+								"computed": false,
+								"new":      "874037324847",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"payer": {
+								"computed": false,
+								"new":      "BucketOwner",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_s3_bucket_server_side_encryption_configuration": {
+				"this": {
+					0: {
+						"applied": {
+							"expected_bucket_owner": "874037324847",
+						},
+						"destroy": false,
+						"diff": {
+							"bucket": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"expected_bucket_owner": {
+								"computed": false,
+								"new":      "874037324847",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"rule.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_s3_bucket_versioning": {
+				"this": {
+					0: {
+						"applied": {
+							"expected_bucket_owner": "874037324847",
+							"mfa": null,
+							"versioning_configuration": [
+								{
+									"mfa_delete": "Disabled",
+									"status":     "Enabled",
+								},
+							],
+						},
+						"destroy": false,
+						"diff": {
+							"bucket": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"expected_bucket_owner": {
+								"computed": false,
+								"new":      "874037324847",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"mfa": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"versioning_configuration.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"versioning_configuration.0.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"versioning_configuration.0.mfa_delete": {
+								"computed": false,
+								"new":      "Disabled",
+								"old":      "",
+							},
+							"versioning_configuration.0.status": {
+								"computed": false,
+								"new":      "Enabled",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_s3_bucket_website_configuration": {
+				"this": {
+					0: {
+						"applied": {
+							"error_document": [
+								{
+									"key": "error.html",
+								},
+							],
+							"expected_bucket_owner": "874037324847",
+							"index_document": [
+								{
+									"suffix": "index.html",
+								},
+							],
+							"redirect_all_requests_to": [],
+							"routing_rule": [
+								{
+									"condition": [
+										{
+											"http_error_code_returned_equals": null,
+											"key_prefix_equals":               "docs/",
+										},
+									],
+									"redirect": [
+										{
+											"host_name":               null,
+											"http_redirect_code":      null,
+											"protocol":                null,
+											"replace_key_prefix_with": "documents/",
+											"replace_key_with":        null,
+										},
+									],
+								},
+								{
+									"condition": [
+										{
+											"http_error_code_returned_equals": "404",
+											"key_prefix_equals":               "archive/",
+										},
+									],
+									"redirect": [
+										{
+											"host_name":               "archive.myhost.com",
+											"http_redirect_code":      "301",
+											"protocol":                "https",
+											"replace_key_prefix_with": null,
+											"replace_key_with":        "not_found.html",
+										},
+									],
+								},
+							],
+						},
+						"destroy": false,
+						"diff": {
+							"bucket": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"error_document.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"error_document.0.%": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"error_document.0.key": {
+								"computed": false,
+								"new":      "error.html",
+								"old":      "",
+							},
+							"expected_bucket_owner": {
+								"computed": false,
+								"new":      "874037324847",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"index_document.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"index_document.0.%": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"index_document.0.suffix": {
+								"computed": false,
+								"new":      "index.html",
+								"old":      "",
+							},
+							"redirect_all_requests_to.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"routing_rule.#": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"routing_rule.0.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"routing_rule.0.condition.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"routing_rule.0.condition.0.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"routing_rule.0.condition.0.http_error_code_returned_equals": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"routing_rule.0.condition.0.key_prefix_equals": {
+								"computed": false,
+								"new":      "docs/",
+								"old":      "",
+							},
+							"routing_rule.0.redirect.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"routing_rule.0.redirect.0.%": {
+								"computed": false,
+								"new":      "5",
+								"old":      "",
+							},
+							"routing_rule.0.redirect.0.host_name": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"routing_rule.0.redirect.0.http_redirect_code": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"routing_rule.0.redirect.0.protocol": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"routing_rule.0.redirect.0.replace_key_prefix_with": {
+								"computed": false,
+								"new":      "documents/",
+								"old":      "",
+							},
+							"routing_rule.0.redirect.0.replace_key_with": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"routing_rule.1.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"routing_rule.1.condition.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"routing_rule.1.condition.0.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"routing_rule.1.condition.0.http_error_code_returned_equals": {
+								"computed": false,
+								"new":      "404",
+								"old":      "",
+							},
+							"routing_rule.1.condition.0.key_prefix_equals": {
+								"computed": false,
+								"new":      "archive/",
+								"old":      "",
+							},
+							"routing_rule.1.redirect.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"routing_rule.1.redirect.0.%": {
+								"computed": false,
+								"new":      "5",
+								"old":      "",
+							},
+							"routing_rule.1.redirect.0.host_name": {
+								"computed": false,
+								"new":      "archive.myhost.com",
+								"old":      "",
+							},
+							"routing_rule.1.redirect.0.http_redirect_code": {
+								"computed": false,
+								"new":      "301",
+								"old":      "",
+							},
+							"routing_rule.1.redirect.0.protocol": {
+								"computed": false,
+								"new":      "https",
+								"old":      "",
+							},
+							"routing_rule.1.redirect.0.replace_key_prefix_with": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"routing_rule.1.redirect.0.replace_key_with": {
+								"computed": false,
+								"new":      "not_found.html",
+								"old":      "",
+							},
+							"routing_rules": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"website_domain": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"website_endpoint": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+		},
+	},
+}
+
+module_paths = [
+	[],
+	[
+		"s3_bucket",
+	],
+]
+
+terraform_version = "1.5.3"
+
+variables = {}
+
+module = func(path) {
+	if types.type_of(path) is not "list" {
+		error("expected list, got", types.type_of(path))
+	}
+
+	if length(path) < 1 {
+		return _modules.root
+	}
+
+	addr = []
+	for path as p {
+		append(addr, "module")
+		append(addr, p)
+	}
+
+	return _modules[strings.join(addr, ".")]
+}
+
+data = _modules.root.data
+path = _modules.root.path
+resources = _modules.root.resources

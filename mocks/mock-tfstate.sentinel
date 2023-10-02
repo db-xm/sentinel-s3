@@ -1,0 +1,317 @@
+import "strings"
+import "types"
+
+outputs = {
+	"s3_bucket_lifecycle_configuration_rules": {
+		"sensitive": false,
+		"type":      "list",
+		"value": [
+			{
+				"abort_incomplete_multipart_upload": [],
+				"expiration":                        [],
+				"filter": [
+					{
+						"and": [
+							{
+								"object_size_greater_than": null,
+								"object_size_less_than":    null,
+								"prefix":                   null,
+								"tags": {
+									"another": "value2",
+									"some":    "value",
+								},
+							},
+						],
+						"object_size_greater_than": null,
+						"object_size_less_than":    null,
+						"prefix":                   null,
+						"tag":                      [],
+					},
+				],
+				"id": "log",
+				"noncurrent_version_expiration": [],
+				"noncurrent_version_transition": [],
+				"prefix":                        null,
+				"status":                        "Enabled",
+				"transition": [
+					{
+						"date":          "",
+						"days":          30,
+						"storage_class": "ONEZONE_IA",
+					},
+					{
+						"date":          "",
+						"days":          60,
+						"storage_class": "GLACIER",
+					},
+				],
+			},
+			{
+				"abort_incomplete_multipart_upload": [
+					{
+						"days_after_initiation": 7,
+					},
+				],
+				"expiration": [],
+				"filter": [
+					{
+						"and": [],
+						"object_size_greater_than": null,
+						"object_size_less_than":    null,
+						"prefix":                   null,
+						"tag":                      [],
+					},
+				],
+				"id": "log1",
+				"noncurrent_version_expiration": [
+					{
+						"newer_noncurrent_versions": null,
+						"noncurrent_days":           300,
+					},
+				],
+				"noncurrent_version_transition": [
+					{
+						"newer_noncurrent_versions": "",
+						"noncurrent_days":           30,
+						"storage_class":             "STANDARD_IA",
+					},
+					{
+						"newer_noncurrent_versions": "",
+						"noncurrent_days":           60,
+						"storage_class":             "ONEZONE_IA",
+					},
+					{
+						"newer_noncurrent_versions": "",
+						"noncurrent_days":           90,
+						"storage_class":             "GLACIER",
+					},
+				],
+				"prefix":     null,
+				"status":     "Enabled",
+				"transition": [],
+			},
+			{
+				"abort_incomplete_multipart_upload": [],
+				"expiration":                        [],
+				"filter": [
+					{
+						"and": [
+							{
+								"object_size_greater_than": 200000,
+								"object_size_less_than":    500000,
+								"prefix":                   "log1/",
+								"tags": {
+									"another": "value2",
+									"some":    "value",
+								},
+							},
+						],
+						"object_size_greater_than": null,
+						"object_size_less_than":    null,
+						"prefix":                   null,
+						"tag":                      [],
+					},
+				],
+				"id": "log2",
+				"noncurrent_version_expiration": [
+					{
+						"newer_noncurrent_versions": null,
+						"noncurrent_days":           300,
+					},
+				],
+				"noncurrent_version_transition": [
+					{
+						"newer_noncurrent_versions": "",
+						"noncurrent_days":           30,
+						"storage_class":             "STANDARD_IA",
+					},
+				],
+				"prefix":     null,
+				"status":     "Enabled",
+				"transition": [],
+			},
+		],
+	},
+}
+
+_modules = {
+	"root": {
+		"data": {
+			"aws_caller_identity": {
+				"current": {
+					0: {
+						"attr": {
+							"account_id": "874037324847",
+							"arn":        "arn:aws:sts::874037324847:assumed-role/AWSReservedSSO_AdministratorAccess_8b96fb376c5ce27e/dbmoss@tradingpoint.com",
+							"id":         "874037324847",
+							"user_id":    "AROA4XAFPFQXSDLBGWK5D:dbmoss@tradingpoint.com",
+						},
+						"depends_on": [],
+						"id":         "874037324847",
+						"tainted":    false,
+					},
+				},
+			},
+			"aws_canonical_user_id": {
+				"current": {
+					0: {
+						"attr": {
+							"display_name": "38611e63afe643de99ed5a5074ad4593",
+							"id":           "6cdab8d73b20fb1dd35b12e4d694448bd88b09ec079562d4b0fb7285e0683a9d",
+						},
+						"depends_on": [],
+						"id":         "6cdab8d73b20fb1dd35b12e4d694448bd88b09ec079562d4b0fb7285e0683a9d",
+						"tainted":    false,
+					},
+				},
+			},
+			"aws_cloudfront_log_delivery_canonical_user_id": {
+				"cloudfront": {
+					0: {
+						"attr": {
+							"id":     "c4c1ede66af53448b93c283ce9448c4ba468c9432aa01d700d3878632f77d2d0",
+							"region": null,
+						},
+						"depends_on": [],
+						"id":         "c4c1ede66af53448b93c283ce9448c4ba468c9432aa01d700d3878632f77d2d0",
+						"tainted":    false,
+					},
+				},
+			},
+			"aws_iam_policy_document": {
+				"policy": {
+					0: {
+						"attr": {
+							"id":   "73423766",
+							"json": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Sid\": \"BadIAMPolicy\",\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:*\",\n      \"Resource\": \"*\"\n    }\n  ]\n}",
+							"override_policy_documents": null,
+							"policy_id":                 null,
+							"source_policy_documents":   null,
+							"statement": [
+								{
+									"actions": [
+										"s3:*",
+									],
+									"condition":      [],
+									"effect":         "Allow",
+									"not_actions":    [],
+									"not_principals": [],
+									"not_resources":  [],
+									"principals":     [],
+									"resources": [
+										"*",
+									],
+									"sid": "BadIAMPolicy",
+								},
+							],
+							"version": "2012-10-17",
+						},
+						"depends_on": [],
+						"id":         "73423766",
+						"tainted":    false,
+					},
+				},
+			},
+		},
+		"path":      [],
+		"resources": {},
+	},
+
+	"module.s3_bucket": {
+		"data": {
+			"aws_caller_identity": {
+				"current": {
+					0: {
+						"attr": {
+							"account_id": "874037324847",
+							"arn":        "arn:aws:sts::874037324847:assumed-role/AWSReservedSSO_AdministratorAccess_8b96fb376c5ce27e/dbmoss@tradingpoint.com",
+							"id":         "874037324847",
+							"user_id":    "AROA4XAFPFQXSDLBGWK5D:dbmoss@tradingpoint.com",
+						},
+						"depends_on": [],
+						"id":         "874037324847",
+						"tainted":    false,
+					},
+				},
+			},
+			"aws_canonical_user_id": {
+				"this": {
+					0: {
+						"attr": {
+							"display_name": "38611e63afe643de99ed5a5074ad4593",
+							"id":           "6cdab8d73b20fb1dd35b12e4d694448bd88b09ec079562d4b0fb7285e0683a9d",
+						},
+						"depends_on": [],
+						"id":         "6cdab8d73b20fb1dd35b12e4d694448bd88b09ec079562d4b0fb7285e0683a9d",
+						"tainted":    false,
+					},
+				},
+			},
+			"aws_partition": {
+				"current": {
+					0: {
+						"attr": {
+							"dns_suffix":         "amazonaws.com",
+							"id":                 "aws",
+							"partition":          "aws",
+							"reverse_dns_prefix": "com.amazonaws",
+						},
+						"depends_on": [],
+						"id":         "aws",
+						"tainted":    false,
+					},
+				},
+			},
+			"aws_region": {
+				"current": {
+					0: {
+						"attr": {
+							"description": "Europe (Ireland)",
+							"endpoint":    "ec2.eu-west-1.amazonaws.com",
+							"id":          "eu-west-1",
+							"name":        "eu-west-1",
+						},
+						"depends_on": [],
+						"id":         "eu-west-1",
+						"tainted":    false,
+					},
+				},
+			},
+		},
+		"path": [
+			"s3_bucket",
+		],
+		"resources": {},
+	},
+}
+
+module_paths = [
+	[],
+	[
+		"s3_bucket",
+	],
+]
+
+terraform_version = "1.5.3"
+
+module = func(path) {
+	if types.type_of(path) is not "list" {
+		error("expected list, got", types.type_of(path))
+	}
+
+	if length(path) < 1 {
+		return _modules.root
+	}
+
+	addr = []
+	for path as p {
+		append(addr, "module")
+		append(addr, p)
+	}
+
+	return _modules[strings.join(addr, ".")]
+}
+
+data = _modules.root.data
+path = _modules.root.path
+resources = _modules.root.resources

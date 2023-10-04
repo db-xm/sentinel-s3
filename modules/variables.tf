@@ -1,187 +1,55 @@
-variable "create_bucket" {
-  description = "Controls if S3 bucket should be created"
+variable "bucket_logging" {
+  description = "Enable bucket logging. Will store logs in another existing bucket. You must give the log-delivery group WRITE and READ_ACP permissions to the target bucket. i.e. true | false"
+  type        = bool
+  default     = false
+}
+
+variable "block_public_access" {
+  description = "Block various forms of public access on a per bucket level"
+  type        = bool
+  default     = false
+}
+
+variable "block_public_access_acl" {
+  description = "Related to block_public_access. PUT Bucket acl and PUT Object acl calls will fail if the specified ACL allows public access. PUT Object calls will fail if the request includes an object ACL."
   type        = bool
   default     = true
 }
 
-variable "attach_elb_log_delivery_policy" {
-  description = "Controls if S3 bucket should have ELB log delivery policy attached"
-  type        = bool
-  default     = false
-}
-
-variable "attach_lb_log_delivery_policy" {
-  description = "Controls if S3 bucket should have ALB/NLB log delivery policy attached"
-  type        = bool
-  default     = false
-}
-
-variable "attach_access_log_delivery_policy" {
-  description = "Controls if S3 bucket should have S3 access log delivery policy attached"
-  type        = bool
-  default     = false
-}
-
-variable "attach_deny_insecure_transport_policy" {
-  description = "Controls if S3 bucket should have deny non-SSL transport policy attached"
-  type        = bool
-  default     = false
-}
-
-variable "attach_require_latest_tls_policy" {
-  description = "Controls if S3 bucket should require the latest version of TLS"
-  type        = bool
-  default     = false
-}
-
-variable "attach_policy" {
-  description = "Controls if S3 bucket should have bucket policy attached (set to `true` to use value of `policy` as bucket policy)"
-  type        = bool
-  default     = false
-}
-
-variable "attach_public_policy" {
-  description = "Controls if a user defined public bucket policy will be attached (set to `false` to allow upstream to apply defaults to the bucket)"
+variable "block_public_access_ignore_acl" {
+  description = "Related to block_public_access. Ignore public ACLs on this bucket and any objects that it contains."
   type        = bool
   default     = true
 }
 
-variable "attach_inventory_destination_policy" {
-  description = "Controls if S3 bucket should have bucket inventory destination policy attached."
+variable "block_public_access_policy" {
+  description = "Related to block_public_access. Reject calls to PUT Bucket policy if the specified bucket policy allows public access."
+  type        = bool
+  default     = true
+}
+
+variable "block_public_access_restrict_bucket" {
+  description = "Related to block_public_access. Only the bucket owner and AWS Services can access this buckets if it has a public policy."
+  type        = bool
+  default     = true
+}
+
+variable "environment" {
+  description = "Application environment for which this network is being created. must be one of ['Development', 'Integration', 'PreProduction', 'Production', 'QA', 'Staging', 'Test']"
+  type        = string
+  default     = "Development"
+}
+
+variable "force_destroy_bucket" {
+  description = "A boolean that indicates all objects should be deleted from the bucket so that the bucket can be destroyed without error. These objects are not recoverable."
   type        = bool
   default     = false
 }
 
-variable "attach_analytics_destination_policy" {
-  description = "Controls if S3 bucket should have bucket analytics destination policy attached."
+variable "lifecycle_enabled" {
+  description = "Enable object lifecycle management. i.e. true | false"
   type        = bool
   default     = false
-}
-
-variable "attach_deny_incorrect_encryption_headers" {
-  description = "Controls if S3 bucket should deny incorrect encryption headers policy attached."
-  type        = bool
-  default     = false
-}
-
-variable "attach_deny_incorrect_kms_key_sse" {
-  description = "Controls if S3 bucket policy should deny usage of incorrect KMS key SSE."
-  type        = bool
-  default     = false
-}
-
-variable "allowed_kms_key_arn" {
-  description = "The ARN of KMS key which should be allowed in PutObject"
-  type        = string
-  default     = null
-}
-
-variable "attach_deny_unencrypted_object_uploads" {
-  description = "Controls if S3 bucket should deny unencrypted object uploads policy attached."
-  type        = bool
-  default     = false
-}
-
-variable "bucket" {
-  description = "(Optional, Forces new resource) The name of the bucket. If omitted, Terraform will assign a random, unique name."
-  type        = string
-  default     = null
-}
-
-variable "bucket_prefix" {
-  description = "(Optional, Forces new resource) Creates a unique bucket name beginning with the specified prefix. Conflicts with bucket."
-  type        = string
-  default     = null
-}
-
-variable "acl" {
-  description = "(Optional) The canned ACL to apply. Conflicts with `grant`"
-  type        = string
-  default     = null
-}
-
-variable "policy" {
-  description = "(Optional) A valid bucket policy JSON document. Note that if the policy document is not specific enough (but still valid), Terraform may view the policy as constantly changing in a terraform plan. In this case, please make sure you use the verbose/specific version of the policy. For more information about building AWS IAM policy documents with Terraform, see the AWS IAM Policy Document Guide."
-  type        = string
-  default     = null
-}
-
-variable "tags" {
-  description = "(Optional) A mapping of tags to assign to the bucket."
-  type        = map(string)
-  default     = {}
-}
-
-variable "force_destroy" {
-  description = "(Optional, Default:false ) A boolean that indicates all objects should be deleted from the bucket so that the bucket can be destroyed without error. These objects are not recoverable."
-  type        = bool
-  default     = false
-}
-
-variable "acceleration_status" {
-  description = "(Optional) Sets the accelerate configuration of an existing bucket. Can be Enabled or Suspended."
-  type        = string
-  default     = null
-}
-
-variable "request_payer" {
-  description = "(Optional) Specifies who should bear the cost of Amazon S3 data transfer. Can be either BucketOwner or Requester. By default, the owner of the S3 bucket would incur the costs of any data transfer. See Requester Pays Buckets developer guide for more information."
-  type        = string
-  default     = null
-}
-
-variable "website" {
-  description = "Map containing static web-site hosting or redirect configuration."
-  type        = any # map(string)
-  default     = {}
-}
-
-variable "cors_rule" {
-  description = "List of maps containing rules for Cross-Origin Resource Sharing."
-  type        = any
-  default     = []
-}
-
-variable "versioning" {
-  description = "Map containing versioning configuration."
-  type        = map(string)
-  default     = {}
-}
-
-variable "logging" {
-  description = "Map containing access bucket logging configuration."
-  type        = map(string)
-  default     = {}
-}
-
-variable "access_log_delivery_policy_source_buckets" {
-  description = "(Optional) List of S3 bucket ARNs wich should be allowed to deliver access logs to this bucket."
-  type        = list(string)
-  default     = []
-}
-
-variable "access_log_delivery_policy_source_accounts" {
-  description = "(Optional) List of AWS Account IDs should be allowed to deliver access logs to this bucket."
-  type        = list(string)
-  default     = []
-}
-
-variable "grant" {
-  description = "An ACL policy grant. Conflicts with `acl`"
-  type        = any
-  default     = []
-}
-
-variable "owner" {
-  description = "Bucket owner's display name and ID. Conflicts with `acl`"
-  type        = map(string)
-  default     = {}
-}
-
-variable "expected_bucket_owner" {
-  description = "The account ID of the expected bucket owner"
-  type        = string
-  default     = null
 }
 
 variable "lifecycle_rule" {
@@ -190,26 +58,8 @@ variable "lifecycle_rule" {
   default     = []
 }
 
-variable "replication_configuration" {
-  description = "Map containing cross-region replication configuration."
-  type        = any
-  default     = {}
-}
-
-variable "server_side_encryption_configuration" {
-  description = "Map containing server-side encryption configuration."
-  type        = any
-  default     = {}
-}
-
 variable "intelligent_tiering" {
   description = "Map containing intelligent tiering configuration."
-  type        = any
-  default     = {}
-}
-
-variable "object_lock_configuration" {
-  description = "Map containing S3 object locking configuration."
   type        = any
   default     = {}
 }
@@ -220,82 +70,153 @@ variable "metric_configuration" {
   default     = []
 }
 
-variable "inventory_configuration" {
-  description = "Map containing S3 inventory configuration."
-  type        = any
-  default     = {}
-}
-
-variable "inventory_source_account_id" {
-  description = "The inventory source account id."
+variable "logging_bucket_name" {
+  description = "Name of the existing bucket where the logs will be stored."
   type        = string
-  default     = null
+  default     = ""
 }
 
-variable "inventory_source_bucket_arn" {
-  description = "The inventory source bucket ARN."
+variable "logging_bucket_prefix" {
+  description = "Prefix for all log object keys. i.e. logs/"
   type        = string
-  default     = null
+  default     = ""
 }
 
-variable "inventory_self_source_destination" {
-  description = "Whether or not the inventory source bucket is also the destination bucket."
-  type        = bool
-  default     = false
-}
-
-variable "analytics_configuration" {
-  description = "Map containing bucket analytics configuration."
-  type        = any
-  default     = {}
-}
-
-variable "analytics_source_account_id" {
-  description = "The analytics source account id."
+variable "name" {
+  description = "The name of the S3 bucket for the access logs. The bucket name can contain only lowercase letters, numbers, periods (.), and dashes (-). Must be globally unique. If changed, forces a new resource."
   type        = string
-  default     = null
 }
 
-variable "analytics_source_bucket_arn" {
-  description = "The analytics source bucket ARN."
-  type        = string
-  default     = null
-}
-
-variable "analytics_self_source_destination" {
-  description = "Whether or not the analytics source bucket is also the destination bucket."
-  type        = bool
-  default     = false
+variable "object_expiration_days" {
+  description = "Indicates after how many days we are deleting current version of objects. Set to 0 to disable or at least 365 days longer than TransitionInDaysGlacier. i.e. 0 to disable, otherwise 1-999"
+  type        = number
+  default     = 0
 }
 
 variable "object_lock_enabled" {
-  description = "Whether S3 bucket should have an Object Lock configuration enabled."
+  description = "Indicates whether this bucket has an Object Lock configuration enabled. Disabled by default. You can only enable S3 Object Lock for new buckets. If you need to turn on S3 Object Lock for an existing bucket, please contact AWS Support."
   type        = bool
   default     = false
 }
 
-variable "block_public_acls" {
-  description = "Whether Amazon S3 should block public ACLs for this bucket."
-  type        = bool
-  default     = true
+variable "object_lock_token" {
+  description = "A token to allow Object Lock to be enabled for an existing bucket. You must contact AWS support for the bucket's 'Object Lock token'. The token is generated in the back-end when versioning is enabled on a bucket."
+  type        = string
+  default     = null
 }
 
-variable "block_public_policy" {
-  description = "Whether Amazon S3 should block public bucket policies for this bucket."
-  type        = bool
-  default     = true
+variable "object_lock_mode" {
+  description = "The default Object Lock retention mode you want to apply to new objects placed in this bucket. Valid values are GOVERNANCE and COMPLIANCE. Default is GOVERNANCE (allows administrative override)."
+  type        = string
+  default     = "GOVERNANCE"
 }
 
-variable "ignore_public_acls" {
-  description = "Whether Amazon S3 should ignore public ACLs for this bucket."
-  type        = bool
-  default     = true
+variable "object_lock_retention_days" {
+  description = "The retention of the object lock in days. Either days or years must be specified, but not both."
+  type        = number
+  default     = null
 }
 
-variable "restrict_public_buckets" {
-  description = "Whether Amazon S3 should restrict public bucket policies for this bucket."
+variable "object_lock_retention_years" {
+  description = "The retention of the object lock in years. Either days or years must be specified, but not both."
+  type        = number
+  default     = null
+}
+
+variable "sse_algorithm" {
+  description = "The server-side encryption algorithm to use. Valid values are AES256, aws:kms, and none"
+  type        = string
+  default     = "AES256"
+}
+
+variable "kms_key_id" {
+  description = "The AWS KMS master key ID used for the SSE-KMS encryption. This can only be used when you set the value of sse_algorithm as aws:kms."
+  type        = string
+  default     = null
+}
+
+variable "bucket_key_enabled" {
+  description = "Whether or not to use Amazon S3 Bucket Keys for SSE-KMS."
   type        = bool
-  default     = true
+  default     = false
+}
+
+variable "tags" {
+  description = "A map of tags to be applied to the Bucket. i.e {Environment='Development'}"
+  type        = map(string)
+  default     = {}
+}
+
+variable "versioning" {
+  description = "Enable bucket versioning."
+  type        = bool
+  default     = false
+}
+
+variable "mfa_delete" {
+  description = "Specifies whether MFA delete is enabled in the bucket versioning configuration"
+  type        = bool
+  default     = false
+}
+
+variable "website" {
+  description = "Use bucket as a static website. i.e. true | false"
+  type        = bool
+  default     = false
+}
+
+variable "website_config" {
+  description = "Map containing static web-site hosting or redirect configuration."
+  type        = any # map(string)
+  default     = {}
+}
+
+variable "cors" {
+  description = "Enable CORS Rules. Rules must be defined in the variable cors_rules"
+  type        = bool
+  default     = false
+}
+
+variable "cors_rule" {
+  description = "List of maps containing rules for Cross-Origin Resource Sharing."
+  type        = any
+  default     = []
+}
+
+variable "expected_bucket_owner" {
+  description = "The account ID of the expected bucket owner"
+  type        = string
+  default     = null
+}
+
+variable "enable_intelligent_tiering" {
+  description = "Enable intelligent tiering"
+  type        = bool
+  default     = false
+}
+
+variable "enable_bucket_metrics" {
+  description = "Enable bucket metrics"
+  type        = bool
+  default     = false
+}
+
+variable "owner" {
+  description = "Bucket owner's display name and ID. Conflicts with `acl`"
+  type        = map(string)
+  default     = {}
+}
+
+variable "acl" {
+  description = "(Optional) The canned ACL to apply. Conflicts with `grant`"
+  type        = string
+  default     = null
+}
+
+variable "grant" {
+  description = "An ACL policy grant. Conflicts with `acl`"
+  type        = any
+  default     = []
 }
 
 variable "control_object_ownership" {
@@ -307,11 +228,5 @@ variable "control_object_ownership" {
 variable "object_ownership" {
   description = "Object ownership. Valid values: BucketOwnerEnforced, BucketOwnerPreferred or ObjectWriter. 'BucketOwnerEnforced': ACLs are disabled, and the bucket owner automatically owns and has full control over every object in the bucket. 'BucketOwnerPreferred': Objects uploaded to the bucket change ownership to the bucket owner if the objects are uploaded with the bucket-owner-full-control canned ACL. 'ObjectWriter': The uploading account will own the object if the object is uploaded with the bucket-owner-full-control canned ACL."
   type        = string
-  default     = "BucketOwnerEnforced"
-}
-
-variable "putin_khuylo" {
-  description = "Do you agree that Putin doesn't respect Ukrainian sovereignty and territorial integrity? More info: https://en.wikipedia.org/wiki/Putin_khuylo!"
-  type        = bool
-  default     = true
+  default     = "ObjectWriter"
 }

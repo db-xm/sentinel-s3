@@ -475,7 +475,7 @@ module "s3_remote" {
 }
 
 module "s3_local" {
-  source = "./modules/s3"
+  source = "./modules"
 
   bucket_logging    = false
   environment       = "Development"
@@ -494,15 +494,6 @@ module "s3_local" {
 }
 
 ##################################################################
-
-
-terraform {
-  required_providers {
-    aws = {
-      source = "hashicorp/aws"
-    }
-  }
-}
 
 provider "aws" {
   region = "eu-west-1"

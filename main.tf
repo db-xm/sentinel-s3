@@ -31,6 +31,48 @@ resource "aws_cloudfront_distribution" "cloudfront" {
     cloudfront_default_certificate = false
     minimum_protocol_version = "TLSv1_2016"     # TLS1 is not secure
   }
+
+  restrictions {
+    geo_restriction {
+      restriction_type = "whitelist"
+      locations        = ["US", "CA", "GB", "DE"]
+    }
+  }
+
+  default_cache_behavior {
+    allowed_methods  = ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"]
+    cached_methods   = ["GET", "HEAD"]
+    target_origin_id = "iactest"
+    cache_policy_id = aws_cloudfront_cache_policy.cache_policy.id
+  }
+}
+
+resource "aws_cloudfront_cache_policy" "cache_policy" {
+  name        = "example-policy"
+  comment     = "test comment"
+  default_ttl = 50
+  max_ttl     = 100
+  min_ttl     = 1
+  parameters_in_cache_key_and_forwarded_to_origin {
+    cookies_config {
+      cookie_behavior = "whitelist"
+      cookies {
+        items = ["example"]
+      }
+    }
+    headers_config {
+      header_behavior = "whitelist"
+      headers {
+        items = ["example"]
+      }
+    }
+    query_strings_config {
+      query_string_behavior = "whitelist"
+      query_strings {
+        items = ["example"]
+      }
+    }
+  }
 }
 
 ########################################################
@@ -72,7 +114,7 @@ resource "aws_dynamodb_table" "dynamodb" {
 
 resource "aws_dax_cluster" "dax" {
   cluster_name                     = "xm-iac-tool-testing"
-  iam_role_arn                     = aws_iam_role.dyanmodb_role.arn
+  iam_role_arn                     = aws_iam_role.dynamodb_role.arn
   node_type                        = "dax.r4.large"
   replication_factor               = 1
   cluster_endpoint_encryption_type = "NONE"
@@ -595,9 +637,9 @@ resource "aws_db_parameter_group" "postgres" {
 
 resource "aws_redshift_cluster" "redshift" {
   cluster_identifier = "xm-iac-tool-testing"
-  database_name      = "xm-iac-tool-testing"
+  database_name      = "xm_iac_tool_testing"
   master_username    = "username"
-  master_password    = "avoid-plaintext-passwords"
+  master_password    = "Avoid-plaintext-passwords1"
   node_type          = "dc2.large"
   cluster_type       = "single-node"
   encrypted          = false

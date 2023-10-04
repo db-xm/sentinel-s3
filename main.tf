@@ -44,6 +44,11 @@ resource "aws_cloudfront_distribution" "cloudfront" {
     cached_methods   = ["GET", "HEAD"]
     target_origin_id = "iactest"
     cache_policy_id = aws_cloudfront_cache_policy.cache_policy.id
+
+    viewer_protocol_policy = "allow-all"
+    min_ttl                = 0
+    default_ttl            = 3600
+    max_ttl                = 86400
   }
 }
 

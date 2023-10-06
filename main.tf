@@ -570,12 +570,6 @@ module "s3_local" {
   }
 }
 
-##################################################################
-
-provider "aws" {
-  region = "eu-west-1"
-}
-
 
 ###################################################################
 
@@ -853,4 +847,9 @@ resource "aws_s3_bucket_acl" "acl_1" {
 # Encryption at rest
     // This does not need a test case as it is not possible via Terraform or AWS console to create an S3 bucket with AWS-SSE disabled
 
+##################################################################
+
+provider "aws" {
+  region = "eu-west-1"
+}
 

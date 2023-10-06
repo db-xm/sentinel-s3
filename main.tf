@@ -1,14 +1,14 @@
 /*resource "aws_athena_workgroup" "athena" {
   name = "xm-iac-tool-testing"
 
-  /*configuration {
+  configuration {
     result_configuration {
       encryption_configuration {
         encryption_option = "SSE_KMS"
         kms_key_arn = 
       }
     }
-  }*/
+  }
 }
 
 ########################################################

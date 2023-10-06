@@ -1,4 +1,4 @@
-resource "aws_athena_workgroup" "athena" {
+/*resource "aws_athena_workgroup" "athena" {
   name = "xm-iac-tool-testing"
 
   /*configuration {
@@ -691,6 +691,51 @@ resource "aws_redshift_parameter_group" "redshift" {
   }
 }
 
+##############################################################
+
+resource "aws_sns_topic" "topic" {
+    name = "xm-iac-tool-testing"
+    # policy = 
+    # kms_master_key_id = ""
+}
+
+/*data "aws_iam_policy_document" "hello" {
+  statement {
+    sid       = "AllowPublishThroughSSLOnly"
+    effect    = "Deny"
+    resources = [aws_sns_topic.topic.arn]
+    actions   = ["SNS:Publish"]
+
+    condition {
+      test     = "Bool"
+      variable = "aws:SecureTransport"
+      values   = ["false"]
+    }
+
+    principals {
+      type        = "*"
+      identifiers = ["*"]
+    }
+  }
+}*/
+
+##############################################################
+
+resource "aws_sqs_queue" "queue" {
+  name                    = "xm-iac-tool-testing"
+  sqs_managed_sse_enabled = false
+  #kms_master_key_id = 
+}
+
+##############################################################
+
+resource "aws_ssm_parameter" "ssm" {
+  name = "xm-iac-tool-testing"
+  type = "String"
+  description = "Parameter stored unencrypted"
+  value = "Use KMS for storing parameters"
+}
+*/
 #################################################################
 
 data "aws_canonical_user_id" "current" {}
@@ -801,52 +846,5 @@ resource "aws_s3_bucket_acl" "acl_1" {
 
 # Encryption at rest
     // This does not need a test case as it is not possible via Terraform or AWS console to create an S3 bucket with AWS-SSE disabled
-
-
-##############################################################
-
-resource "aws_sns_topic" "topic" {
-    name = "xm-iac-tool-testing"
-    # policy = 
-    # kms_master_key_id = ""
-}
-
-/*data "aws_iam_policy_document" "hello" {
-  statement {
-    sid       = "AllowPublishThroughSSLOnly"
-    effect    = "Deny"
-    resources = [aws_sns_topic.topic.arn]
-    actions   = ["SNS:Publish"]
-
-    condition {
-      test     = "Bool"
-      variable = "aws:SecureTransport"
-      values   = ["false"]
-    }
-
-    principals {
-      type        = "*"
-      identifiers = ["*"]
-    }
-  }
-}*/
-
-##############################################################
-
-resource "aws_sqs_queue" "queue" {
-  name                    = "xm-iac-tool-testing"
-  sqs_managed_sse_enabled = false
-  #kms_master_key_id = 
-}
-
-##############################################################
-
-resource "aws_ssm_parameter" "ssm" {
-  name = "xm-iac-tool-testing"
-  type = "String"
-  description = "Parameter stored unencrypted"
-  value = "Use KMS for storing parameters"
-}
-
 
 

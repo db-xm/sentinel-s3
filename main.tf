@@ -736,11 +736,6 @@ data "aws_canonical_user_id" "current" {}
 
 resource "aws_s3_bucket" "bucket" {
   bucket = "xm-iac-tool-testing"
-
-  tags = {
-    Name        = "My bucket"
-    Environment = "Dev"
-  }
 }
 
 # Avoid wildcards in bucket policy actions and principal

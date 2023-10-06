@@ -699,7 +699,7 @@ resource "aws_sns_topic" "topic" {
     # kms_master_key_id = ""
 }
 
-/*data "aws_iam_policy_document" "hello" {
+data "aws_iam_policy_document" "hello" {
   statement {
     sid       = "AllowPublishThroughSSLOnly"
     effect    = "Deny"
@@ -717,7 +717,7 @@ resource "aws_sns_topic" "topic" {
       identifiers = ["*"]
     }
   }
-}*/
+}
 
 ##############################################################
 
@@ -742,6 +742,12 @@ data "aws_canonical_user_id" "current" {}
 
 resource "aws_s3_bucket" "bucket" {
   bucket = "xm-iac-tool-testing"
+
+  tags = {
+    Name        = "My bucket"
+    Environment = "Dev"
+    Classification = "Confidential"
+  }
 }
 
 # Avoid wildcards in bucket policy actions and principal

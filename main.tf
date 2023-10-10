@@ -737,6 +737,14 @@ data "aws_canonical_user_id" "current" {}
 resource "aws_s3_bucket" "bucket" {
   bucket = "xm-iac-tool-testingg"
 }
+
+resource "aws_s3_bucket" "bucket_tagged" {
+  bucket = "xm-iac-tool-testingg-tagged"
+
+  tags = {
+	Classification = "Internal"
+  }
+}
 /*
 # Avoid wildcards in bucket policy actions and principal
 # Enforce encryption in-transit

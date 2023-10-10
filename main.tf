@@ -738,13 +738,16 @@ resource "aws_s3_bucket" "bucket" {
   bucket = "xm-iac-tool-testingg"
 }
 
-resource "aws_s3_bucket" "bucket_tagged" {
-  bucket = "xm-iac-tool-testingg-tagged"
+# Block public access settings to true
+resource "aws_s3_bucket_public_access_block" "bucket" {
+  bucket = aws_s3_bucket.bucket.id
 
-  tags = {
-	Classification = "Internal"
-  }
+  block_public_acls       = false
+  block_public_policy     = false
+  ignore_public_acls      = false
+  restrict_public_buckets = false
 }
+
 /*
 # Avoid wildcards in bucket policy actions and principal
 # Enforce encryption in-transit
@@ -788,16 +791,6 @@ data "aws_iam_policy_document" "bucket_policy" {
       identifiers = ["*"]
     }
   }
-}
-
-# Block public access settings to true
-resource "aws_s3_bucket_public_access_block" "bucket" {
-  bucket = aws_s3_bucket.bucket.id
-
-  block_public_acls       = false
-  block_public_policy     = false
-  ignore_public_acls      = false
-  restrict_public_buckets = false
 }
 
 # Public ACL

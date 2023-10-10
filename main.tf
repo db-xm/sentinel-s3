@@ -731,13 +731,13 @@ resource "aws_ssm_parameter" "ssm" {
 }
 */
 #################################################################
-/*
+
 data "aws_canonical_user_id" "current" {}
 
 resource "aws_s3_bucket" "bucket" {
-  bucket = "xm-iac-tool-testing"
+  bucket = "xm-iac-tool-testingg"
 }
-
+/*
 # Avoid wildcards in bucket policy actions and principal
 # Enforce encryption in-transit
 resource "aws_s3_bucket_policy" "bucket" {

@@ -745,20 +745,6 @@ resource "aws_s3_bucket_public_access_block" "bucket" {
   block_public_acls       = false
   block_public_policy     = false
   ignore_public_acls      = false
-  restrict_public_buckets = false
-}
-
-resource "aws_s3_bucket" "buckett" {
-  bucket = "xm-iac-tool-testinggg"
-}
-
-# Block public access settings to true
-resource "aws_s3_bucket_public_access_block" "buckett" {
-  bucket = aws_s3_bucket.buckett.id
-
-  block_public_acls       = true
-  block_public_policy     = true
-  ignore_public_acls      = true
   restrict_public_buckets = true
 }
 

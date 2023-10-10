@@ -731,7 +731,7 @@ resource "aws_ssm_parameter" "ssm" {
 }
 */
 #################################################################
-
+/*
 data "aws_canonical_user_id" "current" {}
 
 resource "aws_s3_bucket" "bucket" {
@@ -807,7 +807,7 @@ resource "aws_s3_bucket_acl" "acl_1" {
   ]
   bucket = aws_s3_bucket.bucket.id
   acl    = "public-read-write"
-}
+}*/
 
 /*resource "aws_s3_bucket_acl" "acl_2" {
   depends_on = [

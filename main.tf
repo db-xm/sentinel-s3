@@ -735,7 +735,7 @@ resource "aws_ssm_parameter" "ssm" {
 data "aws_canonical_user_id" "current" {}
 
 resource "aws_s3_bucket" "bucket" {
-  bucket = "xm-iac-tool-testingg"
+  bucket = "xm-iac-tool-testing"
 }
 
 # Block public access settings to true
@@ -745,7 +745,7 @@ resource "aws_s3_bucket_public_access_block" "bucket" {
   block_public_acls       = false
   block_public_policy     = false
   ignore_public_acls      = false
-  restrict_public_buckets = true
+  restrict_public_buckets = false
 }
 
 /*
